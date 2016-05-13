@@ -5,21 +5,21 @@
   <artifactId>foodAPI</artifactId>
   <packaging>war</packaging>
   <version>0.0.1-SNAPSHOT</version>
-  <name>foodAPI Maven Webapp</name>
+  <name>foodAPI</name>
   <url>http://maven.apache.org</url>
-  
+
   <properties>
     <spring.version>4.2.0.RELEASE</spring.version>
     <hibernate.version>5.1.0.Final</hibernate.version>
-    
+    <mysql.version>5.1.39</mysql.version>
     <jstl.version>1.2</jstl.version>
     <java.version>1.7</java.version>
     <spring.security.version>3.2.0.RELEASE</spring.security.version>
   </properties>
-  
+
   <dependencies>
-  
-  <dependency>
+
+    <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-core</artifactId>
       <version>${spring.version}</version>
@@ -30,14 +30,6 @@
       <artifactId>spring-context</artifactId>
       <version>${spring.version}</version>
     </dependency>
-    
-    <dependency>
-          <groupId>org.springframework</groupId>
-          <artifactId>spring-jdbc</artifactId>
-          <version>${spring.version}</version>
-      </dependency>
-      
-      
 
     <dependency>
       <groupId>org.springframework</groupId>
@@ -63,16 +55,16 @@
       <version>${spring.version}</version>
       <scope>test</scope>
     </dependency>
-  
-  
+
+
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
-    
-      <!-- SpringSecurity -->
+
+    <!-- SpringSecurity -->
     <dependency>
       <groupId>org.springframework.security</groupId>
       <artifactId>spring-security-core</artifactId>
@@ -96,14 +88,14 @@
       <artifactId>spring-security-oauth2</artifactId>
       <version>1.0.0.RELEASE</version>
     </dependency>
-    
+
     <!-- Hibernate 4 dependencies -->
     <dependency>
       <groupId>org.hibernate</groupId>
       <artifactId>hibernate-core</artifactId>
       <version>${hibernate.version}</version>
     </dependency>
-    
+
     <!-- Database connection pool -->
     <dependency>
       <groupId>org.apache.commons</groupId>
@@ -117,16 +109,30 @@
         </exclusion>
       </exclusions>
     </dependency>
-    
+
+    <!--MYSQL Connector -->
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>${mysql.version}</version>
+    </dependency>
+
     <!-- Servlet and JSP -->
     <dependency>
       <groupId>javax.servlet</groupId>
       <artifactId>javax.servlet-api</artifactId>
       <version>3.1.0</version>
     </dependency>
-    
+
   </dependencies>
   <build>
     <finalName>foodAPI</finalName>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>2.3.2</version>
+      </plugin>
+    </plugins>
   </build>
 </project>
