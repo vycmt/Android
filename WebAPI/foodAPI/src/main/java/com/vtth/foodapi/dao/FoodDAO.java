@@ -14,5 +14,5 @@ import com.vtth.foodapi.entity.TblFood;
 public interface FoodDAO {
 
        public TblFood getFood(int id);
-       public List<TblFood> searchByMaterial(String material);
+       public List<TblFood> searchByMaterial(String material, int start, int limit);
 }

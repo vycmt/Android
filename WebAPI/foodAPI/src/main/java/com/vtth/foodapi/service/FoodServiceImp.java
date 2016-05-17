@@ -2,18 +2,31 @@ package com.vtth.foodapi.service;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.vtth.foodapi.dao.FoodDAO;
 import com.vtth.foodapi.entity.TblFood;
 
+
+@Service
+@Transactional
 public class FoodServiceImp implements FoodService {
 
-    public TblFood getFood(int id) {
-        // TODO Auto-generated method stub
-        return null;
+    public FoodServiceImp() {
+        System.out.println("FoodServiceImp()");
     }
 
-    public List<TblFood> searchByMaterial(String materials) {
-        // TODO Auto-generated method stub
-        return null;
+    @Autowired
+    private FoodDAO foodDao;
+
+    public TblFood getFood(int id) {
+        return foodDao.getFood(id);
+    }
+
+    public List<TblFood> searchByMaterial(String materials, int start, int limit) {
+        return foodDao.searchByMaterial(materials, start, limit);
     }
 
 }

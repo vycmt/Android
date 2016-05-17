@@ -15,5 +15,5 @@ public interface FoodService {
         
         public TblFood getFood(int id);
         
-        public List<TblFood> searchByMaterial(String materials);
+        public List<TblFood> searchByMaterial(String materials, int start, int limit);
 }
