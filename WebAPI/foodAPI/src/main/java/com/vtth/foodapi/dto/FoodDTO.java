@@ -17,6 +17,10 @@ public class FoodDTO implements Serializable {
     private String foodName;
     private String description;
     private String images;
+    private String abc;
+    private String xyz;
+    private String fpt;
+    private String aaaaaaa;
 
     public FoodDTO() {
         // TODO Auto-generated constructor stub
@@ -60,7 +64,23 @@ public class FoodDTO implements Serializable {
         this.description = description;
     }
 
-    public FoodDTO(String images) {
+    public String getXyz() {
+		return xyz;
+	}
+
+	public void setXyz(String xyz) {
+		this.xyz = xyz;
+	}
+
+	public String getFpt() {
+		return fpt;
+	}
+
+	public void setFpt(String fpt) {
+		this.fpt = fpt;
+	}
+
+	public FoodDTO(String images) {
         super();
         this.images = images;
     }
