@@ -26,9 +26,9 @@ public class DAO implements Serializable{
         Connection con = DBUtils.makeConnection();
         PreparedStatement stm = null;
         if(con!= null) {
-            String sql = "INSERT INTO 'fooddb' , 'tbl_food' "
-                    + "('FoodName', 'Description', 'ListMaterial', 'Images', 'VisitNum', CategoryID' )"
-                    + "VALUES (?,?,?,?,?,?)";
+            String sql = "INSERT INTO tbl_food (FoodName,Description,ListMaterial,"
+                    + "Images,VisitNum,CategoryID) VALUES (?,?,?,?,?,?)";
+               
             try {
                 stm = con.prepareStatement(sql);
                 stm.setString(1, food.getFoodName());
@@ -180,7 +180,7 @@ public class DAO implements Serializable{
         Connection con = DBUtils.makeConnection();
         PreparedStatement stm = null;
         if (con != null) {
-            String sql = "INSERT INTO `fooddb`.`tbl_category` (`CategoryName`) VALUES (?);";
+            String sql = "INSERT INTO tbl_category (CategoryName) VALUES (?)";
             try {
                 stm = con.prepareStatement(sql);
                 stm.setString(1, category.getCategoryName());
@@ -215,8 +215,9 @@ public class DAO implements Serializable{
         Connection con = DBUtils.makeConnection();
         PreparedStatement stm = null;
         if (con != null) {
-            String sql = "INSERT INTO `fooddb`.`tbl_fooddetail` (`FoodID`, `MaterialDetail`, `Tutorial`, `Source`) "
-                    + "VALUES (?, ?, ?, ?, ?);";
+            String sql = "INSERT INTO tbl_fooddetail "
+                    + "(FoodID, MaterialDetail, Tutorial, Source) "
+                    + "VALUES (?, ?, ?, ?);";
             try {
                 stm = con.prepareStatement(sql);
                 stm.setInt(1, foodDetail.getFoodID());
