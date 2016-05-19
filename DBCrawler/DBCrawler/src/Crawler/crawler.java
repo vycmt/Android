@@ -3,24 +3,23 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package Crawler;
 
+import Pages.monan9;
 import Pages.sotaynauan;
-import Pages.webnauan;
 
 /**
  *
  * @author SONY
  */
 public class crawler {
-    
+
     public static void main(String[] args) {
-        
+
         sotaynauan sotay = new sotaynauan();
         sotay.scanning("http://sotaynauan.com/");
-        
-        webnauan web = new webnauan();
-        web.scanning("http://webnauan.net/");
+
+        monan9 monan = new monan9();
+        monan.scanning("http://monan9.com/");
     }
 }

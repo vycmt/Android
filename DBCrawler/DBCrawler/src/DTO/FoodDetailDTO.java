@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package DTO;
 
 /**
@@ -11,22 +10,21 @@ package DTO;
  * @author SONY
  */
 public class FoodDetailDTO {
-    
+
     private int foodID;
     private String materialDetail;
     private String tutorial;
     private String source;
-    private int userID;
 
     public FoodDetailDTO() {
     }
 
-    public FoodDetailDTO(int foodID, String materialDetail, String tutorial, String source, int userID) {
+    public FoodDetailDTO(int foodID, String materialDetail, String tutorial, String source) {
         this.foodID = foodID;
         this.materialDetail = materialDetail;
         this.tutorial = tutorial;
         this.source = source;
-        this.userID = userID;
+
     }
 
     public int getFoodID() {
@@ -61,13 +59,4 @@ public class FoodDetailDTO {
         this.source = source;
     }
 
-    public int getUserID() {
-        return userID;
-    }
-
-    public void setUserID(int userID) {
-        this.userID = userID;
-    }
-    
-    
 }
