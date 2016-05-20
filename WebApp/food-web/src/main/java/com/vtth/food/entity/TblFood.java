@@ -1,5 +1,5 @@
-package com.vtth.foodapi.entity;
-// Generated May 20, 2016 1:47:30 PM by Hibernate Tools 5.1.0.Alpha1
+package com.vtth.food.entity;
+// Generated May 20, 2016 3:45:49 PM by Hibernate Tools 5.1.0.Alpha1
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

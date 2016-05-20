@@ -21,7 +21,10 @@ public class FoodDetailDAOImp implements FoodDetailDAO {
     private FoodDAO foodDao;
     
     public TblFooddetail getFood(int id) {
-       
+       TblFood food = foodDao.increaseVisistNum(id);
+       if (food == null){
+           System.out.println("Error happen at getFood() in FoodDetailDAOImp");
+       }
         return hibernateUtil.fetchById(id, TblFooddetail.class);
     }
 

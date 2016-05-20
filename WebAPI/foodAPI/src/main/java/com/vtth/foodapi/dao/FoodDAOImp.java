@@ -45,4 +45,11 @@ public class FoodDAOImp implements FoodDAO {
         return null;
     }
 
+    public TblFood increaseVisistNum(int id) {
+        
+        TblFood food = utils.fetchById(id, TblFood.class);
+        food.setVisitNum(food.getVisitNum() + 1);
+        return utils.update(food);
+    }
+
 }
