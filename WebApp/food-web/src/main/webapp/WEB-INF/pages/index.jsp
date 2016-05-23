@@ -7,6 +7,6 @@
 <title>Spring4 MVC -HelloWorld</title>
 </head>
 <body>
-  <h1>WELCOME HERE</h1>
+  <h1>DEMO SITEMESH</h1>
 </body>
 </html>
