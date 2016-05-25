@@ -5,5 +5,8 @@
         <pattern>/*</pattern>
     </decorator>
     
+    <decorator name="login" page="/WEB-INF/pages/login.jsp"></decorator>
+    <decorator name="home" page="/WEB-INF/pages/index.jsp"></decorator>
+    <decorator name="detail" page="/WEB-INF/pages/detail.jsp"></decorator>
     
 </decorators>
