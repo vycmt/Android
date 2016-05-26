@@ -19,6 +19,7 @@
 package com.vtth.food.dto;
 
 import com.vtth.food.entity.TblFood;
+import com.vtth.food.entity.TblFooddetail;
 
 /**
  * @author MHVTu
@@ -30,22 +31,29 @@ public class FooddetailDTO {
     private String materialDetail;
     private String tutorial;
     private String source;
-    
+
     public FooddetailDTO() {
-        // TODO Auto-generated constructor stub
+        // TODO Auto-generated constructor stub FOR DEBUGGING
+        System.out.println("FooddetailDTO()");
     }
 
-    
-    
     public FooddetailDTO(int foodId, String materialDetail, String tutorial, String source) {
-        super();
         this.foodId = foodId;
         this.materialDetail = materialDetail;
         this.tutorial = tutorial;
         this.source = source;
     }
-
-
+    
+    
+    /**
+     * @param foodDetail : Constructor with data from Entity
+     */
+    public FooddetailDTO (TblFooddetail foodDetail){
+        this.foodId = foodDetail.getFoodId();
+        this.materialDetail = foodDetail.getMaterialDetail();
+        this.tutorial = foodDetail.getTutorial();
+        this.source = foodDetail.getSource();
+    }
 
     public int getFoodId() {
         return foodId;
@@ -78,5 +86,5 @@ public class FooddetailDTO {
     public void setSource(String source) {
         this.source = source;
     }
-    
+
 }

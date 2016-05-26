@@ -3,34 +3,38 @@ package com.vtth.food.dto;
 import java.io.Serializable;
 
 import com.vtth.food.entity.TblCategory;
+import com.vtth.food.entity.TblFood;
 import com.vtth.food.entity.TblFooddetail;
 
-// Tạo DTO
-// Nhớ phải implement Serializable, trong Entity có bao nhiêu field thì bên này có bấy nhiêu
-//field trừ private TblFooddetail tblFooddetail; 
-//Tạo contrustuctor, và get,set cho từng field
-
 public class FoodDTO implements Serializable {
-        
-    private int foodId; 
+
+    private int foodId;
     private String foodName;
     private String description;
-    private String listMaterial;
     private String images;
-    private int visitNum;
-      
+
     public FoodDTO() {
-        // TODO Auto-generated constructor stub
+        // TODO Auto-generated constructor stub FOR DEBUGGING
+        System.out.println("FoodDTO()");
     }
 
-    public FoodDTO(int foodId, String foodName, String description, String listMaterial, String images, int visitNum) {
-        super();
+    public FoodDTO(int foodId, String foodName, String description, String images) {
         this.foodId = foodId;
         this.foodName = foodName;
         this.description = description;
-        this.listMaterial = listMaterial;
         this.images = images;
-        this.visitNum = visitNum;
+
+    }
+
+   
+    /**
+     * @param food : Constructor with data from Entity
+     */
+    public FoodDTO(TblFood food) {
+        this.foodId = food.getFoodId();
+        this.foodName = food.getFoodName();
+        this.description = food.getDescription();;
+        this.images = food.getImages();
     }
 
     public int getFoodId() {
@@ -57,14 +61,6 @@ public class FoodDTO implements Serializable {
         this.description = description;
     }
 
-    public String getListMaterial() {
-        return listMaterial;
-    }
-
-    public void setListMaterial(String listMaterial) {
-        this.listMaterial = listMaterial;
-    }
-
     public String getImages() {
         return images;
     }
@@ -73,12 +69,4 @@ public class FoodDTO implements Serializable {
         this.images = images;
     }
 
-    public int getVisitNum() {
-        return visitNum;
-    }
-
-    public void setVisitNum(int visitNum) {
-        this.visitNum = visitNum;
-    }
-    
 }
