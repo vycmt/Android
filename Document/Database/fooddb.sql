@@ -43,8 +43,6 @@ CREATE TABLE IF NOT EXISTS `fooddb`.`tbl_food` (
   `Images` VARCHAR(255) NULL DEFAULT NULL,
   `VisitNum` INT(11) NULL DEFAULT NULL,
   `CategoryID` INT(11) NOT NULL,
-  `LinkImage` VARCHAR(255) NULL DEFAULT NULL,
-  `Tutorial` VARCHAR(255) NULL DEFAULT NULL,
   PRIMARY KEY (`FoodID`),
   INDEX `CatetoryID_idx` (`CategoryID` ASC),
   CONSTRAINT `CatetoryID`
