@@ -27,7 +27,7 @@ public class CategoryDAOImp implements CategoryDAO {
         System.out.println("CategoryDAOImp()");
     }
     
-    @Autowired
+    @Autowired // bat buoc phai co
     private HibernateUtil utils;
     
     public List<TblCategory> getCategory() {
@@ -35,9 +35,10 @@ public class CategoryDAOImp implements CategoryDAO {
         return null;
     }
 
+    // Demo mau
     public Serializable createCategory(TblCategory newCategory) {
         // TODO Auto-generated method stub
-        return null;
+        return utils.create(newCategory);
     }
 
 }

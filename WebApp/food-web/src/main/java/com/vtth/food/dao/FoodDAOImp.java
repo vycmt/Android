@@ -33,8 +33,7 @@ public class FoodDAOImp implements FoodDAO {
     }
 
     public TblFood getFood(int id) {
-        // TODO Auto-generated method stub
-        return null;
+        return utils.fetchById(id, TblFood.class);
     }
 
     /*
@@ -54,11 +53,13 @@ public class FoodDAOImp implements FoodDAO {
 
     }
 
+    // Chua lai khong implement
     public TblFood increaseNum(int visitNum) {
         // TODO Auto-generated method stub
         return null;
     }
 
+    // Chua lai khong implement
     public List<TblFood> searchByMaterial(String material, int start, int limit) {
         // TODO Auto-generated method stub
         return null;
