@@ -23,35 +23,29 @@ import com.vtth.food.entity.TblFooddetail;
 public class FoodDetailServiceImp implements FoodDetailService {
 
     @Autowired
-    // khai báo thêm FoodDetailDAO + @Autowired
     FoodDetailDAO foodDetailDAO;
-    // bắt buộc
+    
     public FoodDetailServiceImp() {
         System.out.println("FoodDetailServiceImp()");
     }
 
     public Serializable createFoodDetail(TblFooddetail newFoodDetail) {
-        // TODO Auto-generated method stub
         return foodDetailDAO.createFoodDetail(newFoodDetail);
     }
 
     public TblFooddetail getFoodDetail(int id) {
-        // TODO Auto-generated method stub
         return foodDetailDAO.getFoodDetail(id);
     }
 
     public List<TblFooddetail> getFoodDetail() {
-        // TODO Auto-generated method stub
         return foodDetailDAO.getFoodDetail();
     }
 
     public void deleteFoodDetail(int id) {
-        // TODO Auto-generated method stub
         foodDetailDAO.deleteFoodDetail(id);
     }
 
     public TblFooddetail updateFoodDetail(TblFooddetail newFoodDetail) {
-        // TODO Auto-generated method stub
         return foodDetailDAO.updateFoodDetail(newFoodDetail);
     }
     

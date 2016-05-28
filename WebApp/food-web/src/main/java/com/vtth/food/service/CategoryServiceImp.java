@@ -17,20 +17,17 @@ import com.vtth.food.entity.TblCategory;
  * @author KMF
  *
  */
-@Service // bắt buộc phải có
-@Transactional // bắt buộc phải có
+@Service
+@Transactional
 public class CategoryServiceImp implements CategoryService {
 
-    @Autowired // bắt buộc phải có
+    @Autowired
     CategoryDAO categoryDAO;
 
-    // bắt buộc phải có
     public CategoryServiceImp() {
-        // TODO Auto-generated constructor stub
         System.out.println("CategoryServiceImp()");
     }
 
-    // Demo mẫu
     public List<TblCategory> getCategory() {
         return categoryDAO.getCategory();
     }

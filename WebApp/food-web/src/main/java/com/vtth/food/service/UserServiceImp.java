@@ -17,6 +17,7 @@ import com.vtth.food.entity.TblUser;
  * @author KMF
  *
  */
+
 @Service
 @Transactional
 public class UserServiceImp implements UserService {
@@ -28,11 +29,9 @@ public class UserServiceImp implements UserService {
     }
     
     public Serializable createUser(TblUser newUser) {
-        // TODO Auto-generated method stub
         return userDAO.createUser(newUser);
     }
 
-    // để t implement
     public TblUser checkLogin(TblUser user) {
         // TODO Auto-generated method stub
         return null;
