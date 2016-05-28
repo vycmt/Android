@@ -14,7 +14,6 @@ import com.vtth.food.entity.TblUser;
  */
 public interface UserService {
 
-    public List<TblUser> getUser();
     public Serializable createUser(TblUser newUser);
     public TblUser checkLogin (TblUser user);
 }

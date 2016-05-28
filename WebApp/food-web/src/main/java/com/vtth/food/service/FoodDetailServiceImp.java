@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.vtth.food.entity.TblFood;
+import com.vtth.food.entity.TblFooddetail;
 
 /**
  * @author SONY
@@ -17,45 +18,39 @@ import com.vtth.food.entity.TblFood;
  */
 @Service
 @Transactional
-public class FoodDetailServiceImp implements FoodService {
+public class FoodDetailServiceImp implements FoodDetailService {
 
+    // khai báo thêm FoodDetailDAO + @Autowired
+    
+    // bắt buộc
     public FoodDetailServiceImp() {
         System.out.println("FoodDetailServiceImp()");
     }
-    
-    public Serializable createFood(TblFood newFood) {
+
+    public Serializable createFoodDetail(TblFooddetail newFoodDetail) {
         // TODO Auto-generated method stub
         return null;
     }
 
-    public TblFood getFood(int id) {
+    public TblFooddetail getFoodDetail(int id) {
         // TODO Auto-generated method stub
         return null;
     }
 
-    public List<TblFood> getFood() {
+    public List<TblFooddetail> getFoodDetail() {
         // TODO Auto-generated method stub
         return null;
     }
 
-    public TblFood updateFood(TblFood newFodd) {
-        // TODO Auto-generated method stub
-        return null;
-    }
-
-    public void deleteFood(int id) {
+    public void deleteFoodDetail(int id) {
         // TODO Auto-generated method stub
         
     }
 
-    public TblFood increaseNum(int visitNum) {
+    public TblFooddetail updateFoodDetail(TblFooddetail newFoodDetail) {
         // TODO Auto-generated method stub
         return null;
     }
-
-    public List<TblFood> searchByMaterial(String material, int start, int limit) {
-        // TODO Auto-generated method stub
-        return null;
-    }
-
+    
+   
 }

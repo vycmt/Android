@@ -23,16 +23,12 @@ public class UserServiceImp implements UserService {
         System.out.println("UserServiceImp()");
     }
     
-    public List<TblUser> getUser() {
-        // TODO Auto-generated method stub
-        return null;
-    }
-
     public Serializable createUser(TblUser newUser) {
         // TODO Auto-generated method stub
         return null;
     }
 
+    // để t implement
     public TblUser checkLogin(TblUser user) {
         // TODO Auto-generated method stub
         return null;
