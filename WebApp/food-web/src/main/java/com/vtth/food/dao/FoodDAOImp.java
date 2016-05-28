@@ -13,7 +13,7 @@ import com.vtth.food.entity.TblFood;
 import com.vtth.food.util.HibernateUtil;
 
 /**
- * @author MHVTu
+ * @author KMF
  *
  */
 @Repository

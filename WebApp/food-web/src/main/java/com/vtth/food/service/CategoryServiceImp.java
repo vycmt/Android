@@ -14,7 +14,7 @@ import com.vtth.food.dao.CategoryDAO;
 import com.vtth.food.entity.TblCategory;
 
 /**
- * @author SONY
+ * @author KMF
  *
  */
 @Service // bắt buộc phải có

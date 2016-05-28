@@ -22,7 +22,7 @@ import com.vtth.food.entity.TblFood;
 import com.vtth.food.entity.TblFooddetail;
 
 /**
- * @author MHVTu
+ * @author KMF
  *
  */
 public class FooddetailDTO {

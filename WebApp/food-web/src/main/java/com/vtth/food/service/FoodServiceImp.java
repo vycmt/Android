@@ -6,13 +6,15 @@ package com.vtth.food.service;
 import java.io.Serializable;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.vtth.food.dao.FoodDAO;
 import com.vtth.food.entity.TblFood;
 
 /**
- * @author SONY
+ * @author KMF
  *
  */
 @Service
@@ -20,7 +22,9 @@ import com.vtth.food.entity.TblFood;
 public class FoodServiceImp implements FoodService {
 
     // khai bao FoodDAO + @Autowired
-
+    @Autowired
+    FoodDAO foodDAO;
+    
     public FoodServiceImp() {
         // TODO Auto-generated constructor stub
         System.out.println("FoodServiceImp()");
@@ -28,27 +32,27 @@ public class FoodServiceImp implements FoodService {
 
     public Serializable createFood(TblFood newFood) {
         // TODO Auto-generated method stub
-        return null;
+        return foodDAO.createFood(newFood);
     }
 
     public TblFood getFoodId(int id) {
         // TODO Auto-generated method stub
-        return null;
+        return foodDAO.getFood(id);
     }
 
     public List<TblFood> getFood() {
         // TODO Auto-generated method stub
-        return null;
+        return foodDAO.getFood();
     }
 
     public TblFood updateFood(TblFood newFodd) {
         // TODO Auto-generated method stub
-        return null;
+        return foodDAO.updateFood(newFodd);
     }
 
     public void deleteFood(int id) {
         // TODO Auto-generated method stub
-
+        foodDAO.deleteFood(id);
     }
 
     // để t implement
