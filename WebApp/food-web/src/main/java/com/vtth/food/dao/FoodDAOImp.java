@@ -47,10 +47,23 @@ public class FoodDAOImp implements FoodDAO {
     }
 
     public TblFood increaseNum(int visitNum) {
-        return null;
+        // search food based on their id
+        TblFood food = utils.fetchById(visitNum, TblFood.class);
+        food.setVisitNum(food.getVisitNum() + 1);
+        return utils.update(food);
     }
 
     public List<TblFood> searchByMaterial(String material, int start, int limit) {
+        String[] search = material.split("-");
+        if (search.length > 0) {
+            String query = String.format(" WHERE listMaterial LIKE '%s'", ("%" + search[0] + "%"));
+            for (int i = 1; i < search.length; i++) {
+                String tmp = String.format(" AND listMaterial LIKE '%s'", ("%" + search[i] + "%"));
+                query += tmp;
+            }
+            query += " ORDER BY visitNum DESC";
+            return utils.fetchAllByQuery(query, start, limit, TblFood.class);
+        }
         return null;
     }
 

@@ -22,10 +22,10 @@ public class UserDAOImp implements UserDAO {
     public UserDAOImp() {
         System.out.println("UserDAOImp");
     }
-    
+
     @Autowired
     private HibernateUtil utils;
-    
+
     public List<TblUser> getUser() {
         return utils.fetchAll(TblUser.class);
     }
@@ -35,7 +35,13 @@ public class UserDAOImp implements UserDAO {
     }
 
     public TblUser checkLogin(TblUser user) {
-        return (TblUser) utils.fetchAll(TblUser.class);
+        List<TblUser> allUserLst = getUser();
+        for (TblUser tblUser : allUserLst) {
+            if (tblUser.getUserName().equals(user.getUserName()) && tblUser.getPassword().equals(user.getPassword())) {
+                return tblUser;
+            }
+        }
+        return null;
     }
 
 }
