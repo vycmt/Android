@@ -29,7 +29,7 @@ public class FoodDAOImp implements FoodDAO {
 
     public Serializable createFood(TblFood newFood) {
         // TODO Auto-generated method stub
-        return null;
+        return utils.create(newFood);
     }
 
     public TblFood getFood(int id) {
@@ -43,9 +43,8 @@ public class FoodDAOImp implements FoodDAO {
         return utils.fetchAll(TblFood.class);
     }
 
-    public TblFood updateFood(TblFood newFodd) {
-        // TODO Auto-generated method stub
-        return null;
+    public TblFood updateFood(TblFood newFood) {
+        return utils.update(newFood);
     }
 
     public void deleteFood(int id) {

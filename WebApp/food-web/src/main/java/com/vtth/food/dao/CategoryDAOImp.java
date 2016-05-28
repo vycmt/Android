@@ -13,7 +13,7 @@ import com.vtth.food.entity.TblCategory;
 import com.vtth.food.util.HibernateUtil;
 
 /**
- * @author SONY
+ * @author MHVTu
  *
  */
 @Repository // bắt buộc phải có
@@ -32,7 +32,7 @@ public class CategoryDAOImp implements CategoryDAO {
     
     public List<TblCategory> getCategory() {
         // TODO Auto-generated method stub
-        return null;
+        return utils.fetchAll(TblCategory.class);
     }
 
     // Demo mau
