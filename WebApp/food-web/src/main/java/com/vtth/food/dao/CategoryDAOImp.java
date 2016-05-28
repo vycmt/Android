@@ -16,28 +16,24 @@ import com.vtth.food.util.HibernateUtil;
  * @author MHVTu
  *
  */
-@Repository // bắt buộc phải có
+@Repository
 public class CategoryDAOImp implements CategoryDAO {
 
     /**
-     * Constructor bắt buộc phải có 
+     * Constructor
      */
     public CategoryDAOImp() {
-        // TODO Auto-generated constructor stub FOR DEBUGGING
         System.out.println("CategoryDAOImp()");
     }
     
-    @Autowired // bat buoc phai co
+    @Autowired
     private HibernateUtil utils;
     
     public List<TblCategory> getCategory() {
-        // TODO Auto-generated method stub
         return utils.fetchAll(TblCategory.class);
     }
 
-    // Demo mau
     public Serializable createCategory(TblCategory newCategory) {
-        // TODO Auto-generated method stub
         return utils.create(newCategory);
     }
 

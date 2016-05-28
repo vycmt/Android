@@ -13,14 +13,13 @@ import com.vtth.food.entity.TblFood;
 import com.vtth.food.util.HibernateUtil;
 
 /**
- * @author SONY
+ * @author MHVTu
  *
  */
-@Repository // bắt buộc phải có
+@Repository
 public class FoodDAOImp implements FoodDAO {
 
     public FoodDAOImp() {
-        // TODO Auto-generated constructor stub FOR DEBUGGING
         System.out.println("FoodDAOImp()");
     }
 
@@ -28,7 +27,6 @@ public class FoodDAOImp implements FoodDAO {
     private HibernateUtil utils;
 
     public Serializable createFood(TblFood newFood) {
-        // TODO Auto-generated method stub
         return utils.create(newFood);
     }
 
@@ -36,9 +34,6 @@ public class FoodDAOImp implements FoodDAO {
         return utils.fetchById(id, TblFood.class);
     }
 
-    /*
-     * DEMO FOR DAO
-     */
     public List<TblFood> getFood() {
         return utils.fetchAll(TblFood.class);
     }
@@ -48,19 +43,14 @@ public class FoodDAOImp implements FoodDAO {
     }
 
     public void deleteFood(int id) {
-        // TODO Auto-generated method stub
-
+        utils.delete(id, TblFood.class);
     }
 
-    // Chua lai khong implement
     public TblFood increaseNum(int visitNum) {
-        // TODO Auto-generated method stub
         return null;
     }
 
-    // Chua lai khong implement
     public List<TblFood> searchByMaterial(String material, int start, int limit) {
-        // TODO Auto-generated method stub
         return null;
     }
 
