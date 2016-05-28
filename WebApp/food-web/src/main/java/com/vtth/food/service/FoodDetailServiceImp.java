@@ -24,7 +24,7 @@ public class FoodDetailServiceImp implements FoodDetailService {
 
     @Autowired
     FoodDetailDAO foodDetailDAO;
-    
+
     public FoodDetailServiceImp() {
         System.out.println("FoodDetailServiceImp()");
     }
@@ -48,6 +48,5 @@ public class FoodDetailServiceImp implements FoodDetailService {
     public TblFooddetail updateFoodDetail(TblFooddetail newFoodDetail) {
         return foodDetailDAO.updateFoodDetail(newFoodDetail);
     }
-    
-   
+
 }

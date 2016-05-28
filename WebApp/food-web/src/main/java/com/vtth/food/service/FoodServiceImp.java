@@ -23,7 +23,7 @@ public class FoodServiceImp implements FoodService {
 
     @Autowired
     FoodDAO foodDAO;
-    
+
     public FoodServiceImp() {
         System.out.println("FoodServiceImp()");
     }
@@ -49,7 +49,7 @@ public class FoodServiceImp implements FoodService {
     }
 
     public TblFood increaseNum(int visitNum) {
-        return null;
+        return foodDAO.increaseNum(visitNum);
     }
 
 }

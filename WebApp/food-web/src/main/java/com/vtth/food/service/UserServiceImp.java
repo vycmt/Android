@@ -21,20 +21,19 @@ import com.vtth.food.entity.TblUser;
 @Service
 @Transactional
 public class UserServiceImp implements UserService {
-    
+
     @Autowired
     UserDAO userDAO;
     public UserServiceImp() {
         System.out.println("UserServiceImp()");
     }
-    
+
     public Serializable createUser(TblUser newUser) {
         return userDAO.createUser(newUser);
     }
 
     public TblUser checkLogin(TblUser user) {
-        // TODO Auto-generated method stub
-        return null;
+        return userDAO.checkLogin(user);
     }
 
 }
