@@ -54,4 +54,5 @@
     <style name="TranslucentBlack" parent="android:Theme.Translucent">
         <item name="android:windowBackground">@android:color/black</item>
     </style>
+
 </resources>
