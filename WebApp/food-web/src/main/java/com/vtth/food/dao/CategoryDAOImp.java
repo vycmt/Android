@@ -16,7 +16,7 @@ import com.vtth.food.util.HibernateUtil;
  * @author KMF
  *
  */
-@Repository
+@Repository // data-centered: bị động ; các software agent connect tới data-centered
 public class CategoryDAOImp implements CategoryDAO {
 
     /**
