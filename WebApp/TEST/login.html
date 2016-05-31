@@ -1,86 +1,60 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Creative - Bootstrap 3 Responsive Admin Template">
+    <meta name="author" content="GeeksLabs">
+    <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
+    <link rel="shortcut icon" href="img/favicon.png">
 
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta charset="utf-8">
-<title>LOG IN</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="">
-<meta name="keywords" content="">
-<meta name="author" content="">
-<meta name="decorator" content="login" />
+    <title>Login Page 2 | Creative - Bootstrap 3 Responsive Admin Template</title>
 
-<!-- Core CSS - Include with every page -->
-<link href='<c:url value="resources/css/bootstrap.min.css"></c:url>' rel="stylesheet">
-<link href='<c:url value="resources/css/sb-admin-2.css"></c:url>' rel="stylesheet">
-<link rel="stylesheet" href='<c:url value="resources/css/font-awesome.min.css"></c:url>'>
-<link href="<c:url value="resources/css/style.css"></c:url>" rel="stylesheet">
+    <!-- Bootstrap CSS -->    
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- bootstrap theme -->
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <!--external css-->
+    <!-- font icon -->
+    <link href="css/elegant-icons-style.css" rel="stylesheet" />
+    <link href="css/font-awesome.css" rel="stylesheet" />
+    <!-- Custom styles -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style-responsive.css" rel="stylesheet" />
 
-<!-- Import for JavaScript -->
-<script src="<c:url value="resources/js/respond.min.js"></c:url>"></script>
-<script src="<c:url value="resources/js/jquery.js"></c:url>"></script>
-<script src="<c:url value="resources/js/bootstrap.min.js"></c:url>"></script>
-
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
 </head>
-<body>
-  <!-- Form area -->
-  <div class="admin-form">
+
+  <body class="login-img3-body">
+
     <div class="container">
 
-      <div class="row">
-        <div class="col-md-12">
-          <!-- Widget starts -->
-          <div class="widget worange">
-            <!-- Widget head -->
-            <div class="widget-head">
-              <i class="fa fa-lock"></i> Login
+      <form class="login-form" action="index.html">        
+        <div class="login-wrap">
+            <p class="login-img"><i class="icon_lock_alt"></i></p>
+            <div class="input-group">
+              <span class="input-group-addon"><i class="icon_profile"></i></span>
+              <input type="text" class="form-control" placeholder="Username" autofocus>
             </div>
-
-            <div class="widget-content">
-              <div class="padd">
-                <!-- Login form -->
-
-                <spring:form cssClass="form-horizontal" action="/food-web/Admin" commandName="user">
-
-                  <div class="form-group">
-                    <label class="control-label col-lg-3">Username:</label>
-                    <div class="col-lg-9">
-                      <input  cssClass="form-control" placeholder="Username" />
-                    </div>
-                  </div>
-                  <!-- Password -->
-                  <div class="form-group">
-                    <label class="control-label col-lg-3">Password</label>
-                    <div class="col-lg-9">
-                      <input  cssClass="form-control" placeholder="Password" />
-                    </div>
-                  </div>
-                  <!-- Remember me checkbox and sign in button -->
-                  <div class="form-group">
-                    <div class="col-lg-9 col-lg-offset-3">
-                      <div class="checkbox">
-                        <label> <input type="checkbox"> Remember me
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-9 col-lg-offset-3">
-                    <button type="submit" class="btn btn-info btn-sm">Sign in</button>
-                    <button type="reset" class="btn btn-default btn-sm">Reset</button>
-                  </div>
-                  <br />
-                </spring:form>
-
-              </div>
+            <div class="input-group">
+                <span class="input-group-addon"><i class="icon_key_alt"></i></span>
+                <input type="password" class="form-control" placeholder="Password">
             </div>
-
-
-          </div>
+            <label class="checkbox">
+                <input type="checkbox" value="remember-me"> Remember me
+                <span class="pull-right"> <a href="#"> Forgot Password?</a></span>
+            </label>
+            <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
+            <button class="btn btn-info btn-lg btn-block" type="submit">Signup</button>
         </div>
-      </div>
-    </div>
-  </div>
+      </form>
 
-</body>
+    </div>
+
+
+  </body>
 </html>
