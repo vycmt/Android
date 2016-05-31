@@ -18,8 +18,13 @@
 
 <!-- Core CSS - Include with every page -->
 <link href='<c:url value="resources/css/bootstrap.min.css"></c:url>' rel="stylesheet">
-<link href='<c:url value="resources/css/sb-admin-2.css"></c:url>' rel="stylesheet">
+
+<link href='<c:url value="resources/css/bootstrap-theme.css"></c:url>' rel="stylesheet">
+
 <link rel="stylesheet" href='<c:url value="resources/css/font-awesome.min.css"></c:url>'>
+
+<link rel="stylesheet" href='<c:url value="resources/css/elegant-icons-style.css"></c:url>'>
+
 <link href="<c:url value="resources/css/style.css"></c:url>" rel="stylesheet">
 
 <!-- Import for JavaScript -->
@@ -30,63 +35,29 @@
 </head>
 <body>
   <!-- Form area -->
-  <div class="admin-form">
-    <div class="container">
+  <div class="container">
 
-      <div class="row">
-        <div class="col-md-12">
-          <!-- Widget starts -->
-          <div class="widget worange">
-            <!-- Widget head -->
-            <div class="widget-head">
-              <i class="fa fa-lock"></i> Login
+      <form class="login-form" action="index.html">        
+        <div class="login-wrap">
+            <p class="login-img"><i class="icon_lock_alt"></i></p>
+            <div class="input-group">
+              <span class="input-group-addon"><i class="icon_profile"></i></span>
+              <input type="text" class="form-control" placeholder="Username" autofocus>
             </div>
-
-            <div class="widget-content">
-              <div class="padd">
-                <!-- Login form -->
-
-                <spring:form cssClass="form-horizontal" action="/food-web/Admin" commandName="user">
-
-                  <div class="form-group">
-                    <label class="control-label col-lg-3">Username:</label>
-                    <div class="col-lg-9">
-                      <input  cssClass="form-control" placeholder="Username" />
-                    </div>
-                  </div>
-                  <!-- Password -->
-                  <div class="form-group">
-                    <label class="control-label col-lg-3">Password</label>
-                    <div class="col-lg-9">
-                      <input  cssClass="form-control" placeholder="Password" />
-                    </div>
-                  </div>
-                  <!-- Remember me checkbox and sign in button -->
-                  <div class="form-group">
-                    <div class="col-lg-9 col-lg-offset-3">
-                      <div class="checkbox">
-                        <label> <input type="checkbox"> Remember me
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-9 col-lg-offset-3">
-                    <button type="submit" class="btn btn-info btn-sm">Sign in</button>
-                    <button type="reset" class="btn btn-default btn-sm">Reset</button>
-                  </div>
-                  <br />
-                </spring:form>
-
-              </div>
+            <div class="input-group">
+                <span class="input-group-addon"><i class="icon_key_alt"></i></span>
+                <input type="password" class="form-control" placeholder="Password">
             </div>
-
-
-          </div>
+            <label class="checkbox">
+                <input type="checkbox" value="remember-me"> Remember me
+                <span class="pull-right"> <a href="#"> Forgot Password?</a></span>
+            </label>
+            <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
+            <button class="btn btn-info btn-lg btn-block" type="submit">Signup</button>
         </div>
-      </div>
+      </form>
+
     </div>
-  </div>
 
 </body>
 </html>
