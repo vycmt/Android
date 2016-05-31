@@ -1,15 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="spring"%>
-
+<%@ taglib uri="http://www.opensymphony.com/sitemesh/decorator" prefix="decorator"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 <head>
-
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<title>LOG IN</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="">
 <meta name="keywords" content="">
@@ -21,23 +18,24 @@
 
 <link href='<c:url value="resources/css/bootstrap-theme.css"></c:url>' rel="stylesheet">
 
-<link rel="stylesheet" href='<c:url value="resources/css/font-awesome.min.css"></c:url>'>
+<link rel="stylesheet" href='<c:url value="resources/css/font-awesome.css"></c:url>'>
 
 <link rel="stylesheet" href='<c:url value="resources/css/elegant-icons-style.css"></c:url>'>
 
 <link href="<c:url value="resources/css/style.css"></c:url>" rel="stylesheet">
+<link href="<c:url value="resources/css/style-responsive.css"></c:url>" rel="stylesheet">
 
 <!-- Import for JavaScript -->
-<script src="<c:url value="resources/js/respond.min.js"></c:url>"></script>
-<script src="<c:url value="resources/js/jquery.js"></c:url>"></script>
-<script src="<c:url value="resources/js/bootstrap.min.js"></c:url>"></script>
+<%-- <script src="<c:url value="resources/js/respond.min.js"></c:url>"></script> --%>
+<%-- <script src="<c:url value="resources/js/jquery.js"></c:url>"></script> --%>
+<%-- <script src="<c:url value="resources/js/bootstrap.min.js"></c:url>"></script> --%>
 
 </head>
-<body>
+<body class="login-img3-body">
   <!-- Form area -->
   <div class="container">
 
-      <form class="login-form" action="index.html">        
+      <form class="login-form" action="food-web/Admin">        
         <div class="login-wrap">
             <p class="login-img"><i class="icon_lock_alt"></i></p>
             <div class="input-group">
