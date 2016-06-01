@@ -81,7 +81,10 @@ public class ResultAdapter extends BaseAdapter {
         TextView tvName, tvDetails;
 
         public ViewHolder(View v) {
-            // Chưa làm xong
+            ivThumb = (ImageView) v.findViewById(R.id.item_search_thumb_iv);
+            tvName = (TextView) v.findViewById(R.id.item_search_name_tv);
+            tvDetails = (TextView) v.findViewById(R.id.item_search_material_tv);
+
         }
     }
 }
