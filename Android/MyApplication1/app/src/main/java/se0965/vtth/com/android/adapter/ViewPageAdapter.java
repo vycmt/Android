@@ -1,7 +1,31 @@
 package se0965.vtth.com.android.adapter;
 
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+
 /**
  * Created by SONY on 5/28/2016.
  */
-public class ViewPageAdapter {
+public class ViewPageAdapter extends BaseAdapter {
+
+    @Override
+    public int getCount() {
+        return 0;
+    }
+
+    @Override
+    public Object getItem(int position) {
+        return null;
+    }
+
+    @Override
+    public long getItemId(int position) {
+        return 0;
+    }
+
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
+        return null;
+    }
 }
