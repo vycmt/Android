@@ -80,8 +80,8 @@
 		xmlns="http://www.springframework.org/schema/security">
 		<authentication-provider>
 			<user-service>
-				<user name="datht" password="datht@cathl" authorities="ROLE_MOBILE" />
-				<user name="linhvh" password="linhvh@cathl" authorities="ROLE_APP" />
+				<user name="vycmt" password="vy081095" authorities="ROLE_MOBILE" />
+				<user name="cthuyvy" password="sevenni110811" authorities="ROLE_APP" />
 			</user-service>
 		</authentication-provider>
 	</authentication-manager>
