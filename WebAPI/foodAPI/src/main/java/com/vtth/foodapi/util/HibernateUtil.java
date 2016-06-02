@@ -10,16 +10,12 @@ import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-/**
- * @author SONY
- *
- */
 @Repository
 public class HibernateUtil {
-        
+
     @Autowired
     private SessionFactory sessionFactory;
-    
+
     public <T> Serializable create(final T entity) {
         return sessionFactory.getCurrentSession().save(entity);
     }
@@ -42,13 +38,11 @@ public class HibernateUtil {
     public <T> List<T> fetchAll(Class<T> entityClass) {
         return sessionFactory.getCurrentSession().createQuery(" FROM " + entityClass.getName()).list();
     }
-    
+
     @SuppressWarnings("unchecked")
     public <T> List<T> fetchAllByQuery(String query, int start, int limit, Class<T> entityClass) {
         return sessionFactory.getCurrentSession().createQuery("FROM " + entityClass.getName() + query)
-                .setFirstResult(start)
-                .setMaxResults(limit)
-                .list();
+                .setFirstResult(start).setMaxResults(limit).list();
     }
 
     @SuppressWarnings("rawtypes")

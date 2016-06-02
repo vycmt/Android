@@ -23,11 +23,6 @@ import com.vtth.foodapi.service.FoodDetailService;
 import com.vtth.foodapi.service.FoodService;
 import com.vtth.foodapi.util.SearchObj;
 
-
-/**
- * @author SONY
- *
- */
 @RestController
 public class FoodController {
 
@@ -40,13 +35,12 @@ public class FoodController {
     @Autowired
     private FoodDetailService detailService;
 
-//    @RequestMapping("/food/{id}")
-//    public TblFood getFood(@PathVariable("id") int foodId) {
-//        TblFood food = service.getFood(foodId);
-//        // FoodDTO foodDTO = new FoodDTO(food);
-//        return food;
-//    }
-     
+    // @RequestMapping("/food/{id}")
+    // public TblFood getFood(@PathVariable("id") int foodId) {
+    // TblFood food = service.getFood(foodId);
+    // // FoodDTO foodDTO = new FoodDTO(food);
+    // return food;
+    // }
 
     @RequestMapping(value = "search", method = RequestMethod.POST)
     public List<FoodDTO> searchByMaterial(@RequestBody SearchObj searchObj) {

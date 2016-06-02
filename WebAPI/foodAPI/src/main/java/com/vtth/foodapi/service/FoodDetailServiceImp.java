@@ -12,14 +12,14 @@ import com.vtth.foodapi.entity.TblFooddetail;
 public class FoodDetailServiceImp implements FoodDetailService {
 
     public FoodDetailServiceImp() {
-        System.out.println("FoodDetailServiceImp()");
+        System.out.println("FoodDetailServiceImpl()");
     }
-    
+
     @Autowired
-    private FoodDetailDAO foodDetailDao;
-    
+    private FoodDetailDAO foodDetailDAO;
+
     public TblFooddetail getFood(int id) {
-        return foodDetailDao.getFood(id);
+        return foodDetailDAO.getFood(id);
     }
 
 }

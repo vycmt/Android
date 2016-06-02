@@ -10,10 +10,6 @@ import org.springframework.stereotype.Repository;
 import com.vtth.foodapi.entity.TblFood;
 import com.vtth.foodapi.util.HibernateUtil;
 
-/**
- * @author SONY
- *
- */
 @Repository
 public class FoodDAOImp implements FoodDAO {
 
@@ -30,8 +26,8 @@ public class FoodDAOImp implements FoodDAO {
 
     public List<TblFood> searchByMaterial(String material, int start, int limit) {
         String[] searchObj = material.split("-");
-        
-        if (searchObj.length > 0){
+
+        if (searchObj.length > 0) {
             String query = String.format(" WHERE listMaterial LIKE '%s'", ("%" + searchObj[0] + "%"));
             for (int i = 1; i < searchObj.length; i++) {
                 String tmp = String.format(" AND listMaterial LIKE '%s'", ("%" + searchObj[i] + "%"));
@@ -46,7 +42,7 @@ public class FoodDAOImp implements FoodDAO {
     }
 
     public TblFood increaseVisistNum(int id) {
-        
+
         TblFood food = utils.fetchById(id, TblFood.class);
         food.setVisitNum(food.getVisitNum() + 1);
         return utils.update(food);
