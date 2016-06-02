@@ -23,7 +23,7 @@ public abstract class BaseAsyncLoader extends AsyncTask<String, Integer, Object>
         this.activity = activity;
         this.listener = listener;
         authFactory = new AuthorizationFactory();
-        factory = new FoodFactory();
+        factory = new FoodFactory(activity);
     }
 
     @Override

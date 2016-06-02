@@ -1,7 +1,6 @@
 package se0965.vtth.com.android.adapter;
 
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,10 +30,12 @@ public class ResultAdapter extends BaseAdapter {
     // Must have constructor
 
 
-    public ResultAdapter(List<Food> list, Context context) {
-        this.list = list;
+    public ResultAdapter(Context context, List<Food> foods) {
+        this.list = foods;
         this.context = context;
-        inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        inflater = (LayoutInflater) context.
+                getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
     }
 
     @Override

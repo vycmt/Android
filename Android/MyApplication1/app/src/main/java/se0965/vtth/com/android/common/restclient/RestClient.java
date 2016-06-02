@@ -2,6 +2,19 @@ package se0965.vtth.com.android.common.restclient;
 
 import android.net.Uri;
 
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.NameValuePair;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.client.methods.HttpUriRequest;
+import org.apache.http.entity.StringEntity;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.message.BasicNameValuePair;
+import org.apache.http.protocol.HTTP;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -21,8 +34,9 @@ import java.util.ArrayList;
  */
 public class RestClient {
 
-    ArrayList params;
-    ArrayList headers;
+
+    ArrayList<NameValuePair> params;
+    ArrayList<NameValuePair> headers;
     private JSONObject object;
     private String jsonMessage = "";
     private String url;
@@ -45,8 +59,8 @@ public class RestClient {
 
     public RestClient(String url) {
         this.url = url;
-        params = new ArrayList();
-        headers = new ArrayList();
+        params = new ArrayList<NameValuePair>();
+        headers = new ArrayList<NameValuePair>();
         object = new JSONObject();
     }
 
@@ -76,8 +90,7 @@ public class RestClient {
 
     public void execute(RequestMethod method) throws Exception {
         switch (method) {
-            case GET:
-            {
+            case GET: {
                 //add params
                 String combinedParams = "";
                 if (!params.isEmpty()) {
@@ -86,7 +99,7 @@ public class RestClient {
                         String paramString = p.getName() + "=" + URLEncoder.encode(p.getValue(), "UTF-8");
                         if (combinedParams.length() > 1) {
                             combinedParams += "&" + paramString;
-                        }else combinedParams += paramString;
+                        } else combinedParams += paramString;
                     }
                 }
                 HttpGet request = new HttpGet(url + combinedParams);
@@ -98,8 +111,7 @@ public class RestClient {
                 }
                 executeRequest(request, url + combinedParams);
             }
-            case POST:
-            {
+            case POST: {
                 HttpPost request = new HttpPost(url);
                 //add header
                 request.setHeader("Content-Type", "application/json; charset=UTF-8");
@@ -151,9 +163,9 @@ public class RestClient {
             while ((line = reader.readLine()) != null) {
                 sb.append(line + "\n");
             }
-        }catch (IOException ex) {
+        } catch (IOException ex) {
             ex.printStackTrace();
-        }finally {
+        } finally {
             try {
                 inputStream.close();
             } catch (IOException e) {
