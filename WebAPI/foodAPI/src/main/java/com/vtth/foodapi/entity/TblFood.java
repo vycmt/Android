@@ -1,5 +1,5 @@
 package com.vtth.foodapi.entity;
-// Generated May 20, 2016 1:47:30 PM by Hibernate Tools 5.1.0.Alpha1
+// Generated Jun 2, 2016 2:47:32 PM by Hibernate Tools 5.1.0.Alpha1
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -20,30 +20,14 @@ import javax.persistence.Table;
 public class TblFood implements java.io.Serializable {
 
     private Integer foodId;
-    private TblCategory tblCategory;
     private String foodName;
     private String description;
     private String listMaterial;
     private String images;
     private Integer visitNum;
-    private TblFooddetail tblFooddetail;
+    private String tutorial;
 
     public TblFood() {
-    }
-
-    public TblFood(TblCategory tblCategory, String foodName) {
-        this.tblCategory = tblCategory;
-        this.foodName = foodName;
-    }
-    public TblFood(TblCategory tblCategory, String foodName, String description, String listMaterial, String images,
-            Integer visitNum, TblFooddetail tblFooddetail) {
-        this.tblCategory = tblCategory;
-        this.foodName = foodName;
-        this.description = description;
-        this.listMaterial = listMaterial;
-        this.images = images;
-        this.visitNum = visitNum;
-        this.tblFooddetail = tblFooddetail;
     }
 
     @Id
@@ -56,16 +40,6 @@ public class TblFood implements java.io.Serializable {
 
     public void setFoodId(Integer foodId) {
         this.foodId = foodId;
-    }
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "CategoryID", nullable = false)
-    public TblCategory getTblCategory() {
-        return this.tblCategory;
-    }
-
-    public void setTblCategory(TblCategory tblCategory) {
-        this.tblCategory = tblCategory;
     }
 
     @Column(name = "FoodName", nullable = false, length = 500)
@@ -113,13 +87,13 @@ public class TblFood implements java.io.Serializable {
         this.visitNum = visitNum;
     }
 
-    @OneToOne(fetch = FetchType.LAZY, mappedBy = "tblFood")
-    public TblFooddetail getTblFooddetail() {
-        return this.tblFooddetail;
+    @Column(name = "Tutorial")
+    public String getTutorial() {
+        return this.tutorial;
     }
 
-    public void setTblFooddetail(TblFooddetail tblFooddetail) {
-        this.tblFooddetail = tblFooddetail;
+    public void setTutorial(String tutorial) {
+        this.tutorial = tutorial;
     }
 
 }

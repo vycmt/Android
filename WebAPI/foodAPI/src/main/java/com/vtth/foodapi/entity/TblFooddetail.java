@@ -1,5 +1,5 @@
 package com.vtth.foodapi.entity;
-// Generated May 20, 2016 1:47:30 PM by Hibernate Tools 5.1.0.Alpha1
+// Generated Jun 2, 2016 2:47:32 PM by Hibernate Tools 5.1.0.Alpha1
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -20,23 +20,9 @@ import org.hibernate.annotations.Parameter;
 public class TblFooddetail implements java.io.Serializable {
 
     private int foodId;
-    private TblFood tblFood;
     private String materialDetail;
     private String tutorial;
     private String source;
-
-    public TblFooddetail() {
-    }
-
-    public TblFooddetail(TblFood tblFood) {
-        this.tblFood = tblFood;
-    }
-    public TblFooddetail(TblFood tblFood, String materialDetail, String tutorial, String source) {
-        this.tblFood = tblFood;
-        this.materialDetail = materialDetail;
-        this.tutorial = tutorial;
-        this.source = source;
-    }
 
     @GenericGenerator(name = "generator", strategy = "foreign", parameters = @Parameter(name = "property", value = "tblFood"))
     @Id
@@ -49,16 +35,6 @@ public class TblFooddetail implements java.io.Serializable {
 
     public void setFoodId(int foodId) {
         this.foodId = foodId;
-    }
-
-    @OneToOne(fetch = FetchType.LAZY)
-    @PrimaryKeyJoinColumn
-    public TblFood getTblFood() {
-        return this.tblFood;
-    }
-
-    public void setTblFood(TblFood tblFood) {
-        this.tblFood = tblFood;
     }
 
     @Column(name = "MaterialDetail", length = 6000)
