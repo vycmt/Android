@@ -39,18 +39,17 @@
 			<div id="contents">
 				<div id="main">
 					<div id="adbox">
-          
-						<img src="img/nen1.jpg" alt="Img" />
+						<img src="<c:url value="/resources/img/nen1.jpg"></c:url>" class="img-responsive" alt="Image">
 <!--             Nên dùng cách này -->
-<%--  <img src="<c:url value="/resources/user_page/images/search.png"></c:url>" class="img-responsive" alt="Image" width="80px"> --%>
+<%--  <img src="<c:url value="/resources/user_page/images/search.png"></c:url>" class="img-responsive" alt="Image"> --%>
 					</div>
 				</div>
 				<div id="featured">
 					<ul>
-						<li><img src="img/nen2.jpg" alt="" /></li>
-						<li><img src="img/nen3.jpg" alt="" /></li>
-						<li><img src="img/nen4.jpg" alt="" /></li>
-						<li class="last"><img src="img/nen5.jpg" alt="" /></li>
+						<li><img src="<c:url value="/resources/img/nen2.jpg"></c:url>" class="img-responsive" alt="Image"></li>
+						<li><img src="<c:url value="/resources/img/nen3.jpg"></c:url>" class="img-responsive" alt="Image"></li>
+						<li><img src="<c:url value="/resources/img/nen4.jpg"></c:url>" class="img-responsive" alt="Image"></li>
+						<li class="last"><img src="<c:url value="/resources/img/nen5.jpg"></c:url>" class="img-responsive" alt="Image"></li>
 					</ul>
 				</div>
 			</div> <!-- /#contents -->
@@ -62,7 +61,7 @@
 				</div>
 				<div  class="navigation">
 					<a href="" class="logo"></a>
-					<span>&copy; Copyright &copy; 2016. <a href="index.html">VTTH</a> All rights reserved</span>
+					<span>&copy; Copyright &copy; 2016. <a href="">VTTH</a> All rights reserved</span>
 				</div>
 			</div> <!-- /#footer -->
 		</div> <!-- /#page -->
