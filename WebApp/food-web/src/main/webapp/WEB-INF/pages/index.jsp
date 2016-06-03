@@ -32,14 +32,17 @@
 				<ul id="navigation">
 					<li class="selected"><a href="">Home</a></li>
 					<li><a href="">About</a></li>
-					<li><a href="Login.html">Sign In</a></li>
+					<li><a href="/food-web/Admin">Sign In</a></li>
 					<li><a href="">Contact Us</a></li>
 				</ul>
 			</div> <!-- /#header -->
 			<div id="contents">
 				<div id="main">
 					<div id="adbox">
+          
 						<img src="img/nen1.jpg" alt="Img" />
+<!--             Nên dùng cách này -->
+<%--  <img src="<c:url value="/resources/user_page/images/search.png"></c:url>" class="img-responsive" alt="Image" width="80px"> --%>
 					</div>
 				</div>
 				<div id="featured">
