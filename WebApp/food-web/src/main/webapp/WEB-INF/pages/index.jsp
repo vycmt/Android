@@ -10,12 +10,60 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <meta name="decorator" content="home" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Mon ngon moi ngay</title>
+	<link href='<c:url value="resources/css/style1.css"></c:url>' rel="stylesheet">
 
-<title>Spring4 MVC -HelloWorld</title>
 </head>
+
 <body>
-  
-  <h1>DEMO SITEMESH</h1>
+	<div id="background">
+		<div id="page">
+			<div id="header">
+				<span id="connect">
+					<a href="http://facebook.com/freewebsitetemplates" target="_blank" class="facebook"></a>
+					
+				</span>
+				<span id="infos">
+					<a href="">View Bags</a>|<a href="">Checkout</a>
+				</span>
+				<a href="layout.html" id="logo"></a> <!-- /#logo -->
+				<div>Mon ngon moi ngay</div>
+				<ul id="navigation">
+					<li class="selected"><a href="">Home</a></li>
+					<li><a href="">About</a></li>
+					<li><a href="Login.html">Sign In</a></li>
+					<li><a href="">Contact Us</a></li>
+				</ul>
+			</div> <!-- /#header -->
+			<div id="contents">
+				<div id="main">
+					<div id="adbox">
+						<img src="img/nen1.jpg" alt="Img" />
+					</div>
+				</div>
+				<div id="featured">
+					<ul>
+						<li><img src="img/nen2.jpg" alt="" /></li>
+						<li><img src="img/nen3.jpg" alt="" /></li>
+						<li><img src="img/nen4.jpg" alt="" /></li>
+						<li class="last"><img src="img/nen5.jpg" alt="" /></li>
+					</ul>
+				</div>
+			</div> <!-- /#contents -->
+			<div id="footer">
+				<div class="navigation">
+					<a href="">Home</a>|
+					<a href="">About</a>|
+					<a href="">Contact Us</a>
+				</div>
+				<div  class="navigation">
+					<a href="" class="logo"></a>
+					<span>&copy; Copyright &copy; 2016. <a href="index.html">VTTH</a> All rights reserved</span>
+				</div>
+			</div> <!-- /#footer -->
+		</div> <!-- /#page -->
+	</div> <!-- /#background -->
 </body>
 </html>
 
