@@ -47,31 +47,31 @@ public class TabSearch extends Fragment {
         // Tìm floatingaction theo id
         FloatingActionButton fab = (FloatingActionButton) view.findViewById(R.id.fab);
         count = 2;
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                switch (count) {
-//                    case 2:
-//                        count++;
-//                        searchet2.setVisibility(View.VISIBLE);
-//                        break;
-//                    case 3:
-//                        count++;
-//                        searchet3.setVisibility(View.VISIBLE);
-//                        break;
-//                    case 4:
-//                        count++;
-//                        searchet4.setVisibility(View.VISIBLE);
-//                        break;
-//                    case 5:
-//                        count++;
-//                        searchet5.setVisibility(View.VISIBLE);
-//                        break;
-//                    default:break;
-//                }
-//            }
-//        });
-
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                switch (count) {
+                    case 2:
+                        count++;
+                        searchet2.setVisibility(View.VISIBLE);
+                        break;
+                    case 3:
+                        count++;
+                        searchet3.setVisibility(View.VISIBLE);
+                        break;
+                    case 4:
+                        count++;
+                        searchet4.setVisibility(View.VISIBLE);
+                        break;
+                    case 5:
+                        count++;
+                        searchet5.setVisibility(View.VISIBLE);
+                        break;
+                    default:
+                        break;
+                }
+            }
+        });
         hideKeyboard();
         btnSearch.setOnClickListener(new View.OnClickListener() {
             @Override

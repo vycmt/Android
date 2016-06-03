@@ -14,11 +14,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import com.fasterxml.jackson.databind.util.JSONWrappedObject;
-
+import com.vtth.foodapi.dto.CategoryDTO;
 import com.vtth.foodapi.dto.FoodDTO;
 import com.vtth.foodapi.dto.FoodDetailDTO;
+import com.vtth.foodapi.entity.TblCategory;
 import com.vtth.foodapi.entity.TblFood;
 import com.vtth.foodapi.entity.TblFooddetail;
+import com.vtth.foodapi.service.CategoryService;
 import com.vtth.foodapi.service.FoodDetailService;
 import com.vtth.foodapi.service.FoodService;
 import com.vtth.foodapi.util.SearchObj;
@@ -34,6 +36,8 @@ public class FoodController {
     private FoodService service;
     @Autowired
     private FoodDetailService detailService;
+    @Autowired
+    private CategoryService categoryService;
 
     // @RequestMapping("/food/{id}")
     // public TblFood getFood(@PathVariable("id") int foodId) {
@@ -65,4 +69,15 @@ public class FoodController {
         return foodDetailDTO;
 
     }
+
+//    @RequestMapping("category/{catId}")
+//    public CategoryDTO getCategory(@PathVariable("catId") int id) {
+//
+//        TblCategory category = categoryService.getCategory(id);
+//
+//        CategoryDTO DTO = new CategoryDTO(category);
+//
+//        return DTO;
+//    }
+
 }

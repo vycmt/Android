@@ -8,8 +8,10 @@ import java.io.Serializable;
 import com.vtth.foodapi.entity.TblFood;
 
 public class FoodDTO implements Serializable {
-//    private static final long serialVersionUID = -7988799579036225137L;
+    // private static final long serialVersionUID = -7988799579036225137L;
 
+    /** . */
+    private static final long serialVersionUID = 5492848437661692602L;
     private int foodId;
     private String foodName;
     private String description;

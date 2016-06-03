@@ -19,7 +19,7 @@ public class FoodFactory extends AbstractFactory {
 
     public List<Food> getFoods(String keys, String start, String limit, String token) throws Exception {
         restClient.addRoute("search")
-
+                .addHeader("Authorization", AuthorizationFactory.AUTH_TYPE + " " + token)
                 .addRawJson("materials", keys)
                 .addRawJson("start", start)
                 .addRawJson("limit", limit);
@@ -29,7 +29,7 @@ public class FoodFactory extends AbstractFactory {
 
     public FoodDetail getFoodById(String id, String token) throws Exception {
         restClient.addRoute("search")
-
+                .addHeader("Authorization", AuthorizationFactory.AUTH_TYPE + " " + token)
                 .addRoute(id);
         restClient.execute(RequestMethod.GET);
         return response(restClient, FoodDetail.class);

@@ -6,7 +6,9 @@ import com.vtth.foodapi.entity.TblFooddetail;
 
 public class FoodDetailDTO implements Serializable {
 
-//    private static final long serialVersionUID = -7988799579036225137L;
+    /** . */
+    private static final long serialVersionUID = 6412908996362240110L;
+    //    private static final long serialVersionUID = -7988799579036225137L;
     private int foodId;
     private String materialDetail;
     private String tutorial;

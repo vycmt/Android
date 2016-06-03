@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
 import se0965.vtth.com.android.R;
+import se0965.vtth.com.android.fragment.TabBookmark;
 import se0965.vtth.com.android.fragment.TabSearch;
 
 /**
@@ -39,14 +40,20 @@ public class ViewPageAdapter extends FragmentStatePagerAdapter {
             return tabSearch;
         } else {
             // New Tab Bookmark here
+            TabBookmark tabBookmark = new TabBookmark();
+            return tabBookmark;
         }
-        return null;
     }
 
     @Override
     public CharSequence getPageTitle(int position) {
-        // Have problem here
-        return titles[position];
+        Drawable drawable = context.getResources().getDrawable(icons[position]);
+        drawable.setBounds(0, 0, 72, 72);
+        ImageSpan imageSpan = new ImageSpan(drawable);
+        SpannableString spannableString = new SpannableString(" ");
+        spannableString.setSpan(imageSpan, 0, spannableString.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        //return titles[position];
+        return spannableString;
     }
 
     @Override
