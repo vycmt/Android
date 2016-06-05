@@ -3,11 +3,8 @@ package com.vtth.food.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
-import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Parameter;
@@ -19,20 +16,14 @@ import org.hibernate.annotations.Parameter;
 @Table(name = "tbl_userdetail", catalog = "fooddb")
 public class TblUserdetail implements java.io.Serializable {
 
+    /** . */
+    private static final long serialVersionUID = -3677227354084066503L;
     private int userId;
-    private TblUser tblUser;
     private String fullName;
     private String phone;
     private String email;
 
     public TblUserdetail() {
-    }
-
-    public TblUserdetail(TblUser tblUser, String fullName, String phone, String email) {
-        this.tblUser = tblUser;
-        this.fullName = fullName;
-        this.phone = phone;
-        this.email = email;
     }
 
     @GenericGenerator(name = "generator", strategy = "foreign", parameters = @Parameter(name = "property", value = "tblUser"))
@@ -46,16 +37,6 @@ public class TblUserdetail implements java.io.Serializable {
 
     public void setUserId(int userId) {
         this.userId = userId;
-    }
-
-    @OneToOne(fetch = FetchType.LAZY)
-    @PrimaryKeyJoinColumn
-    public TblUser getTblUser() {
-        return this.tblUser;
-    }
-
-    public void setTblUser(TblUser tblUser) {
-        this.tblUser = tblUser;
     }
 
     @Column(name = "FullName", nullable = false)
