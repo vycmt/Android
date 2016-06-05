@@ -4,7 +4,6 @@
 "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
     <session-factory>
-        <property name="hibernate.bytecode.use_reflection_optimizer">false</property>
         <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
         <property name="hibernate.connection.password">vy081095</property>
         <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/fooddb</property>
@@ -13,11 +12,5 @@
         <property name="hibernate.search.autoregister_listeners">false</property>
         <property name="hibernate.showSql">true</property>
         <property name="hibernate.validator.apply_to_ddl">false</property>
-        <mapping class="com.vtth.foodapi.entity.TblUserdetail" />
-        <mapping class="com.vtth.foodapi.entity.HibernateSequence" />
-        <mapping class="com.vtth.foodapi.entity.TblFooddetail" />
-        <mapping class="com.vtth.foodapi.entity.TblCategory" />
-        <mapping class="com.vtth.foodapi.entity.TblUser" />
-        <mapping class="com.vtth.foodapi.entity.TblFood" />
     </session-factory>
 </hibernate-configuration>

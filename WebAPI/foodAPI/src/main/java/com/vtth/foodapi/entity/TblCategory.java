@@ -1,15 +1,11 @@
 package com.vtth.foodapi.entity;
 // Generated Jun 3, 2016 12:27:17 PM by Hibernate Tools 5.0.0.Alpha3
 
-import java.util.HashSet;
-import java.util.Set;
+import static javax.persistence.GenerationType.IDENTITY;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
-import static javax.persistence.GenerationType.IDENTITY;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 /**

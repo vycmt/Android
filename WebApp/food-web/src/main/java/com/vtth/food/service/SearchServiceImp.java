@@ -6,12 +6,14 @@ package com.vtth.food.service;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.transaction.Transactional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
+
 import org.springframework.web.client.RestTemplate;
 import com.vtth.food.dao.FoodDAO;
 import com.vtth.food.dao.UserDAO;
@@ -21,10 +23,6 @@ import com.vtth.food.util.ConstantDataManager;
 import com.vtth.food.util.SearchObject;
 import com.vtth.food.util.TokenObject;
 
-/**
- * @author SONY
- *
- */
 @Service
 @Transactional
 public class SearchServiceImp implements SearchService {

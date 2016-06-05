@@ -2,13 +2,12 @@ package com.vtth.foodapi.service;
 
 import java.util.List;
 
+import javax.transaction.Transactional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
-
 import com.vtth.foodapi.dao.FoodDAO;
 import com.vtth.foodapi.entity.TblFood;
-
 
 @Service
 @Transactional

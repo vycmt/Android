@@ -3,11 +3,8 @@ package com.vtth.foodapi.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
-import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Parameter;
@@ -22,7 +19,7 @@ public class TblFooddetail implements java.io.Serializable {
     /** . */
     private static final long serialVersionUID = -619412732890726962L;
 
-    private int foodId;
+    private Integer foodId;
     private String materialDetail;
     private String tutorial;
     private String source;
@@ -32,10 +29,10 @@ public class TblFooddetail implements java.io.Serializable {
 
     @GenericGenerator(name = "generator", strategy = "foreign", parameters = @Parameter(name = "property", value = "tblFood"))
     @Id
-    @GeneratedValue(generator = "generator")
+   @GeneratedValue(generator = "generator")
 
     @Column(name = "FoodID", unique = true, nullable = false)
-    public int getFoodId() {
+    public Integer getFoodId() {
         return this.foodId;
     }
 

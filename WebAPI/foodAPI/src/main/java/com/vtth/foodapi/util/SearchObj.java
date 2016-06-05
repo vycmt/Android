@@ -1,14 +1,6 @@
-/**
- * 
- */
 package com.vtth.foodapi.util;
 
-/**
- * @author SONY
- *
- */
 public class SearchObj {
-
     private String materials;
     private int start;
     private int limit;

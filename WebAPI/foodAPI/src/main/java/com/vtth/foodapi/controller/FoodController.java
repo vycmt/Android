@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.vtth.foodapi.controller;
 
 import java.util.ArrayList;
@@ -11,13 +8,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
-import com.fasterxml.jackson.databind.util.JSONWrappedObject;
-import com.vtth.foodapi.dto.CategoryDTO;
+
 import com.vtth.foodapi.dto.FoodDTO;
 import com.vtth.foodapi.dto.FoodDetailDTO;
-import com.vtth.foodapi.entity.TblCategory;
 import com.vtth.foodapi.entity.TblFood;
 import com.vtth.foodapi.entity.TblFooddetail;
 import com.vtth.foodapi.service.CategoryService;
@@ -25,7 +19,7 @@ import com.vtth.foodapi.service.FoodDetailService;
 import com.vtth.foodapi.service.FoodService;
 import com.vtth.foodapi.util.SearchObj;
 
-@RestController
+@RestController // same as @Controller but also have @ResponseBody is active
 public class FoodController {
 
     public FoodController() {
@@ -33,45 +27,39 @@ public class FoodController {
     }
 
     @Autowired
-    private FoodService service;
+    private FoodService foodService;
     @Autowired
     private FoodDetailService detailService;
-    @Autowired
-    private CategoryService categoryService;
+//    @Autowired
+//    private CategoryService categoryService;
 
-    // @RequestMapping("/food/{id}")
-    // public TblFood getFood(@PathVariable("id") int foodId) {
-    // TblFood food = service.getFood(foodId);
-    // // FoodDTO foodDTO = new FoodDTO(food);
-    // return food;
-    // }
+//     @RequestMapping("/food/{id}")
+//     public TblFood getFood(@PathVariable("id") int foodId) {
+//     TblFood food = service.getFood(foodId);
+//     // FoodDTO foodDTO = new FoodDTO(food);
+//     return food;
+//     }
 
     @RequestMapping(value = "search", method = RequestMethod.POST)
     public List<FoodDTO> searchByMaterial(@RequestBody SearchObj searchObj) {
-
-        List<TblFood> food = service.searchByMaterial(searchObj.getMaterials(), searchObj.getStart(),
+        List<TblFood> listFood = foodService.searchByMaterial(searchObj.getMaterials(), searchObj.getStart(),
                 searchObj.getLimit());
-
-        List<FoodDTO> listFood = new ArrayList<FoodDTO>();
-        for (TblFood newFood : food) {
-            listFood.add(new FoodDTO(newFood));
+        List<FoodDTO> listFoodDTO = new ArrayList<FoodDTO>();
+        for (TblFood food : listFood) {
+            listFoodDTO.add(new FoodDTO(food));
         }
-        return listFood;
+        return listFoodDTO;
     }
 
-    @RequestMapping("search/{id}")
+    @RequestMapping("/search/{id}")
     public FoodDetailDTO getFoodDetail(@PathVariable("id") int id) {
-
         TblFooddetail foodDetail = detailService.getFood(id);
-
         FoodDetailDTO foodDetailDTO = new FoodDetailDTO(foodDetail);
-
         return foodDetailDTO;
-
     }
 
-//    @RequestMapping("category/{catId}")
-//    public CategoryDTO getCategory(@PathVariable("catId") int id) {
+//    @RequestMapping(value ="/category/{id}")
+//    public CategoryDTO getCategory(@PathVariable("id") int id) {
 //
 //        TblCategory category = categoryService.getCategory(id);
 //
