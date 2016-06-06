@@ -40,8 +40,8 @@
       <i class="icon_menu"></i>
     </div>
   </div>
-
-  <!--logo start--> <a href="index.html" class="logo">Nice <span class="lite">Admin</span></a> <!--logo end-->
+ <a href="index.html" class="logo">Nice <span class="lite">ADMIN</span></a>
+  <!--logo end-->
 
   <div class="nav search-row" id="top_menu">
     <!--  search form start -->
@@ -57,12 +57,12 @@
 
   <ul class="nav navbar-nav pull-right">
     <li class="dropdown pull-right"><a data-toggle="dropdown" class="dropdown-toggle" href="#"> <i
-        class="fa fa-user"></i> Admin <b class="caret"></b>
+        class="fa fa-user"></i> ${sessionScope.username } <b class="caret"></b>
     </a> <!-- Dropdown menu -->
       <ul class="dropdown-menu">
         <li><a href="#"><i class="fa fa-user"></i> Profile</a></li>
         <li><a href="#"><i class="fa fa-cogs"></i> Settings</a></li>
-        <li><a href="login.html"><i class="fa fa-sign-out"></i> Logout</a></li>
+        <li><a href="/food-web/signOut"><i class="fa fa-sign-out"></i> Logout</a></li>
       </ul></li>
 
   </ul>

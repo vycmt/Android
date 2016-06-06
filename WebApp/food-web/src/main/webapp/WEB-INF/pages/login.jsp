@@ -26,19 +26,20 @@
 <link href="<c:url value="resources/css/style.css"></c:url>" rel="stylesheet">
 <link href="<c:url value="resources/css/style-responsive.css"></c:url>" rel="stylesheet">
 
-<link rel="shortcut icon" href="<c:url value="resources/img/favicon/favicon.png"></c:url>">
+<link rel="shortcut icon" href="<c:url value="resources/imgs/favicon/favicon.png"></c:url>">
 
 <!-- Import for JavaScript -->
-<%-- <script src="<c:url value="resources/js/respond.min.js"></c:url>"></script> --%>
-<%-- <script src="<c:url value="resources/js/jquery.js"></c:url>"></script> --%>
-<%-- <script src="<c:url value="resources/js/bootstrap.min.js"></c:url>"></script> --%>
+<script src="<c:url value="resources/js/respond.min.js"></c:url>"></script>
+<script src="<c:url value="resources/js/jquery.js"></c:url>"></script>
+<script src="<c:url value="resources/js/bootstrap.min.js"></c:url>"></script>
 
 </head>
 <body class="login-img3-body">
   <!-- Form area -->
   <div class="container">
-
-    <spring:form  cssClass="form-horizontal" action="/food-web/Admin"  commandName="user">
+     
+<!--      Sửa cssClass="Form-Horizental" --> 
+    <spring:form  cssClass="login-form" action="/food-web/Admin"  commandName="user">
     
       <div class="login-wrap">
         <p class="login-img">
