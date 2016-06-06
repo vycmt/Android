@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         tabs.setCustomTabColorizer(new SlidingTabLayout.TabColorizer() {
             @Override
             public int getIndicatorColor(int position) {
-                return getResources().getColor(R.color.roseDark);
+                return getResources().getColor(R.color.blueViolet);
             }
         });
 

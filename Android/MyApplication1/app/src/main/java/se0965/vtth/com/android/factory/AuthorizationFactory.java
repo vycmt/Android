@@ -13,7 +13,8 @@ public class AuthorizationFactory extends AbstractFactory {
     public static final String AUTH_TYPE = "Bearer";
 
     public AuthorizationFactory(Context context) {
-        super(context, "/iCookAPI/oauth/token?grant_type=password&client_id=mobileapp&client_secret=mobileapp&username=vycmt&password=vy081095");
+        super(context, "/foodAPI/oauth/token?grant_type=password&client_id=mobileapp&client_secret=mobileapp" +
+                "&username=vycmt&password=vy081095");
     }
 
     public TokenObject getAccessToken() throws Exception  {
