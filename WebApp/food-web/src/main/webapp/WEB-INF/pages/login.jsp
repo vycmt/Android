@@ -38,18 +38,19 @@
   <!-- Form area -->
   <div class="container">
 
-    <form class="login-form" action="">
+    <spring:form  cssClass="form-horizontal" action="/food-web/Admin"  commandName="user">
+    
       <div class="login-wrap">
         <p class="login-img">
           <i class="icon_lock_alt"></i>
         </p>
         <div class="input-group">
-          <span class="input-group-addon"><i class="icon_profile"></i></span> <input type="text" class="form-control"
-            placeholder="Username" autofocus>
+          <span class="input-group-addon"><i class="icon_profile"></i></span> 
+          <spring:input path="userName" cssClass="form-control" placeholder="Username" value="${requestScope.username}"/>
         </div>
         <div class="input-group">
-          <span class="input-group-addon"><i class="icon_key_alt"></i></span> <input type="password"
-            class="form-control" placeholder="Password">
+          <span class="input-group-addon"><i class="icon_key_alt"></i></span> 
+           <spring:password path="password" cssClass="form-control" placeholder="Password"/>
         </div>
         <label class="checkbox"> <input type="checkbox" value="remember-me"> Remember me <span
           class="pull-right"> <a href="#"> Forgot Password?</a></span>
@@ -57,7 +58,7 @@
         <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
         <button class="btn btn-info btn-lg btn-block" type="submit">Signup</button>
       </div>
-    </form>
+    </spring:form>
 
   </div>
 
