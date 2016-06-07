@@ -26,7 +26,7 @@
 <link href="<c:url value="resources/css/style.css"></c:url>" rel="stylesheet">
 <link href="<c:url value="resources/css/style-responsive.css"></c:url>" rel="stylesheet">
 
-<link rel="shortcut icon" href="<c:url value="resources/imgs/favicon/favicon.png"></c:url>">
+
 
 <!-- Import for JavaScript -->
 <script src="<c:url value="resources/js/respond.min.js"></c:url>"></script>

@@ -20,7 +20,6 @@ import com.vtth.food.service.UserService;
 @Controller
 public class HomeController {
 
-    // Thiếu khai báo Service
     @Autowired
     UserService userService;
     @Autowired
@@ -30,7 +29,7 @@ public class HomeController {
     public ModelAndView homePage() {
         return new ModelAndView("index");
     }
-    
+
     @RequestMapping(value = "/Admin", method = RequestMethod.GET)
     public ModelAndView login(Model model, HttpSession session) {
         if (session.getAttribute("username") != null) {
@@ -55,12 +54,9 @@ public class HomeController {
         return "login";
     }
 
-    
-
     @RequestMapping(value = "/signOut", method = RequestMethod.GET)
     public String signOut(HttpSession session) {
         session.removeAttribute("username");
-        session.removeAttribute("role");
         return "redirect:/";
     }
 

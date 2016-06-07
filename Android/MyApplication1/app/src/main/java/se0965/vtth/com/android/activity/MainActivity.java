@@ -5,8 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import se0965.vtth.com.android.R;
-
-
 import se0965.vtth.com.android.adapter.ViewPageAdapter;
 import se0965.vtth.com.android.slidingtab.SlidingTabLayout;
 
@@ -32,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Assiging the Sliding Tab Layout View
         tabs = (SlidingTabLayout) findViewById(R.id.tabs);
-        tabs.setCustomTabView(R.layout.header_tab,R.id.tabText);
+        tabs.setCustomTabView(R.layout.header_tab, R.id.tabText);
         // To make the Tabs Fixed set this true, This makes the tabs Space Evenly in Available width
         tabs.setDistributeEvenly(true);
 

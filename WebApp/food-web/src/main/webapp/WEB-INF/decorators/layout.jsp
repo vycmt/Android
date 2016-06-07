@@ -12,7 +12,6 @@
 <meta name="keywords" content="">
 <meta name="author" content="">
 
-<link rel="shortcut icon" href="<c:url value="resources/img/favicon/favicon.png"></c:url>">
 <title>DASHBOARD ADMIN</title>
 
 <link href="<c:url value="/resources/css/bootstrap.min.css" ></c:url>" rel="stylesheet">
@@ -40,8 +39,7 @@
       <i class="icon_menu"></i>
     </div>
   </div>
- <a href="index.html" class="logo">Nice <span class="lite">ADMIN</span></a>
-  <!--logo end-->
+  <a href="index.html" class="logo">Nice <span class="lite">ADMIN</span></a> <!--logo end-->
 
   <div class="nav search-row" id="top_menu">
     <!--  search form start -->
@@ -70,31 +68,23 @@
   <div id="sidebar" class="nav-collapse ">
     <!-- sidebar menu start-->
     <ul class="sidebar-menu">
-      <li class=""><a class="" href="index.html"> <i class="icon_house_alt"></i> <span>Dashboard</span>
+      <li class=""><a class="" href=""> <i class="icon_house_alt"></i> <span>Dashboard</span>
       </a></li>
-      <li class="sub-menu"><a href="javascript:;" class=""> <i class="icon_document_alt"></i> <span>Forms</span>
+      <li class="sub-menu"><a href="/food-web/createPost" class=""> <i class="icon_document_alt"></i> <span>Create</span>
           <span class="menu-arrow arrow_carrot-right"></span>
       </a>
-        <ul class="sub">
-          <li><a class="" href="form_component.html">Form Elements</a></li>
-          <li><a class="" href="form_validation.html">Form Validation</a></li>
-        </ul></li>
-      <li class="sub-menu"><a href="javascript:;" class=""> <i class="icon_desktop"></i> <span>UI
-            Fitures</span> <span class="menu-arrow arrow_carrot-right"></span>
-      </a>
-        <ul class="sub">
-          <li><a class="" href="general.html">Components</a></li>
-          <li><a class="" href="buttons.html">Buttons</a></li>
-          <li><a class="" href="grids.html">Grids</a></li>
-        </ul></li>
+<!--         <ul class="sub"> -->
+<!--           <li><a class="" href="form_component.html">Form Elements</a></li> -->
+<!--           <li><a class="" href="form_validation.html">Form Validation</a></li> -->
+<!--         </ul></li> -->
+     
 
-
-      <li class="sub-menu"><a href="javascript:;" class=""> <i class="icon_table"></i> <span>Tables</span> <span
+      <li class="sub-menu"><a href="/food-web/managePost" class=""> <i class="icon_table"></i> <span>Manage</span> <span
           class="menu-arrow arrow_carrot-right"></span>
       </a>
-        <ul class="sub">
-          <li><a class="" href="basic_table.html">Basic Table</a></li>
-        </ul></li>
+<!--         <ul class="sub"> -->
+<!--           <li><a class="" href="">Basic Table</a></li> -->
+<!--         </ul></li> -->
 
       <li class="sub-menu "><a href="javascript:;" class=""> <i class="icon_documents_alt"></i> <span>Pages</span>
           <span class="menu-arrow arrow_carrot-right"></span>
@@ -115,11 +105,50 @@
       <h3 class="page-header">
         <i class="fa fa fa-bars"></i> Pages
       </h3>
-      <ol class="breadcrumb">
-        <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
-        <li><i class="fa fa-bars"></i>Pages</li>
-        <li><i class="fa fa-square-o"></i>Pages</li>
-      </ol>
+      <!--       <ol class="breadcrumb"> -->
+      <!--         <li><i class="fa fa-home"></i><a href="index.html">Home</a></li> -->
+      <!--         <li><i class="fa fa-bars"></i>Pages</li> -->
+      <!--         <li><i class="fa fa-square-o"></i>Pages</li> -->
+      <!--       </ol> -->
+      
+<!--       Include a part of dashboard.jsp -->
+
+
+      <ul class="today-datas">
+        <!-- List #1 -->
+        <li>
+          <!-- Graph -->
+          <div>
+            <span id="todayspark1" class="spark"></span>
+          </div> <!-- Text -->
+          <div class="datas-text">12,000 visitors/day</div>
+        </li>
+        <li>
+          <div>
+            <span id="todayspark2" class="spark"></span>
+          </div>
+          <div class="datas-text">30,000 Pageviews</div>
+        </li>
+        <li>
+          <div>
+            <span id="todayspark3" class="spark"></span>
+          </div>
+          <div class="datas-text">15.66% Bounce Rate</div>
+        </li>
+        <li>
+          <div>
+            <span id="todayspark4" class="spark"></span>
+          </div>
+          <div class="datas-text">$12,000 Revenue/Day</div>
+        </li>
+        <li>
+          <div>
+            <span id="todayspark5" class="spark"></span>
+          </div>
+          <div class="datas-text">15,000000 visitors till date</div>
+        </li>
+      </ul>
+      
     </div>
   </div>
   <!-- page start--> <!-- page end--> </section> </section> <!--main content end--> </section>

@@ -1,5 +1,5 @@
 <resources>
-    <string name="api_url">http://192.168.1.9:8080</string>
+    <string name="api_url">http://192.168.1.2:8080</string>
     <string name="title_activity_fool_detail">FoolDetailActivity</string>
     <string name="app_name">Món ngon</string>
     <string name="action_settings">Settings</string>
