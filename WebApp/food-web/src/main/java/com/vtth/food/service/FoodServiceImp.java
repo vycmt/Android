@@ -48,10 +48,4 @@ public class FoodServiceImp implements FoodService {
     public TblFood increaseNum(int visitNum) {
         return foodDAO.increaseNum(visitNum);
     }
-
-    public TblFood getFoodId(String foodID) {
-        // TODO Auto-generated method stub
-        return null;
-    }
-
 }

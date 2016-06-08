@@ -57,7 +57,7 @@ public class FoodController {
 				// TODO: handle exception
 				e.printStackTrace();
 			}
-			TblFood result = foodService.getFoodId(foodID);
+			TblFood result = foodService.getFoodId(foodIDInt);
 			return result;
 		}
 		return null;
