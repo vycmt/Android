@@ -31,7 +31,7 @@ public class TabSearch extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_search, container, false);
-        return super.onCreateView(inflater, container, savedInstanceState);
+        return v;
     }
 
     @Override
@@ -43,9 +43,10 @@ public class TabSearch extends Fragment {
         searchet3 = (EditText) view.findViewById(R.id.search_3_et);
         searchet4 = (EditText) view.findViewById(R.id.search_4_et);
         searchet5 = (EditText) view.findViewById(R.id.search_5_et);
+        btnSearch = (ImageView) view.findViewById(R.id.search_btn);
 
         // Tìm floatingaction theo id
-        FloatingActionButton fab = (FloatingActionButton) view.findViewById(R.id.fab);
+        FloatingActionButton fab = (FloatingActionButton) view.findViewById(R.id.search_fab);
         count = 2;
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -111,7 +112,7 @@ public class TabSearch extends Fragment {
                 }
                 else{
                     // show message
-                    Snackbar.make(view,"Nhập từ khóa", Snackbar.LENGTH_LONG).setAction("Action",null).show();
+                    Snackbar.make(view,"Nhập từ khóa để tìm kiếm", Snackbar.LENGTH_LONG).setAction("Action",null).show();
                 }
             }
         });

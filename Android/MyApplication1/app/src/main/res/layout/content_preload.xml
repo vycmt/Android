@@ -9,8 +9,7 @@
         android:layout_height="match_parent"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:src="@drawable/splash_screen_logo"
-        app:mask_color="@android:color/holo_blue_bright" />
-        />
+        android:src="@drawable/splash_screen_logo" />
+
 
 </RelativeLayout>

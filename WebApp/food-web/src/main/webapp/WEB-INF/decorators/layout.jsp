@@ -70,8 +70,8 @@
     <ul class="sidebar-menu">
       <li class=""><a class="" href=""> <i class="icon_house_alt"></i> <span>Dashboard</span>
       </a></li>
-      <li class="sub-menu"><a href="/food-web/createPost" class=""> <i class="icon_document_alt"></i> <span>Create</span>
-          <span class="menu-arrow arrow_carrot-right"></span>
+      <li class="sub-menu"><a href="/food-web/Create" id="postCreate" class=""> <i class="icon_document_alt"></i> <span>Create</span>
+          
       </a>
 <!--         <ul class="sub"> -->
 <!--           <li><a class="" href="form_component.html">Form Elements</a></li> -->
@@ -79,8 +79,7 @@
 <!--         </ul></li> -->
      
 
-      <li class="sub-menu"><a href="/food-web/managePost" class=""> <i class="icon_table"></i> <span>Manage</span> <span
-          class="menu-arrow arrow_carrot-right"></span>
+      <li class="sub-menu"><a href="/food-web/manage" class=""> <i class="icon_table"></i> <span>Manage</span> 
       </a>
 <!--         <ul class="sub"> -->
 <!--           <li><a class="" href="">Basic Table</a></li> -->

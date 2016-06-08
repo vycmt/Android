@@ -27,6 +27,8 @@
         android:layout_height="match_parent"
         android:background="@android:color/transparent"
         android:smoothScrollbar="true"
+        android:scrollingCache="false"
+        android:animationCache="false"
         android:padding="10dp"
         android:divider="@null"
         android:dividerHeight="10dp"

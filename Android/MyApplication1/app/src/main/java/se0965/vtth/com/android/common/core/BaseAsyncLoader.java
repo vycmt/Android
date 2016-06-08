@@ -26,12 +26,13 @@ public abstract class BaseAsyncLoader extends AsyncTask<String, Integer, Object>
         factory = new FoodFactory(activity);
     }
 
+    // khởi tạo tác vụ nền (hiện progress Bar trên tác vụ nền)
     @Override
     protected void onPreExecute() {
         super.onPreExecute();
         dialog = new ProgressDialog(activity);
         dialog.setTitle("Loading");
-        dialog.setMessage("Load more!!!");
+        dialog.setMessage("Search in progress...Please Wait");
         dialog.setIndeterminate(false);
         dialog.show();
     }

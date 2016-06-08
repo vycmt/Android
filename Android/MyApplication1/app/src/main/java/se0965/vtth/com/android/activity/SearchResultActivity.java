@@ -58,6 +58,7 @@ public class SearchResultActivity extends AppCompatActivity implements OnTaskCom
 
     }
 
+    // tích hợp Option Menu vào Fragment
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
@@ -69,6 +70,7 @@ public class SearchResultActivity extends AppCompatActivity implements OnTaskCom
         }
     }
 
+    // tích hợp Option Menu vào Fragment
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);

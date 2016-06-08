@@ -18,4 +18,5 @@
     <color name="textPrice">@android:color/holo_red_dark</color>
     <color name="roseDark">#dd144b</color>
     <color name="orangeDark">#ff753f</color>
+
 </resources>

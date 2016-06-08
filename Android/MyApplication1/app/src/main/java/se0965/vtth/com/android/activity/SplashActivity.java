@@ -14,6 +14,7 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
+        // Tiến trình xử lý mất hơn 5s -> implement Thread chạy nền
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {

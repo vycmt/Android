@@ -23,6 +23,14 @@ public class TblFooddetail implements java.io.Serializable {
     public TblFooddetail() {
     }
 
+    public TblFooddetail(int foodId, String materialDetail, String tutorial, String source) {
+        super();
+        this.foodId = foodId;
+        this.materialDetail = materialDetail;
+        this.tutorial = tutorial;
+        this.source = source;
+    }
+
     @GenericGenerator(name = "generator", strategy = "foreign", parameters = @Parameter(name = "property", value = "tblFood"))
     @Id
     @GeneratedValue(generator = "generator")

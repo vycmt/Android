@@ -53,10 +53,12 @@ public class ResultAdapter extends BaseAdapter {
         return position;
     }
 
+    // trả về View, có thể thêm vào layout AdapterView để hiển thị 1 item
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
         ViewHolder viewHolder;
+        // Nếu convertView == null thì sẽ được "inflate" từ layout XML
         if (convertView == null) {
             convertView = inflater.inflate(R.layout.item_search_result, null);
             viewHolder = new ViewHolder(convertView);

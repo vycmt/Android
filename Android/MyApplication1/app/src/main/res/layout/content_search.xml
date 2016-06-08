@@ -37,14 +37,14 @@
             style="@style/ItemTextSearch"
             android:visibility="gone" />
 
-        <!--<android.support.design.widget.FloatingActionButton-->
-            <!--android:id="@+id/search_fab"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_gravity="left"-->
-            <!--android:layout_margin="16dp"-->
-            <!--android:src="@android:drawable/ic_menu_add"-->
-            <!--/>-->
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/search_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_margin="16dp"
+            android:src="@android:drawable/ic_input_add"
+            />
 
     </LinearLayout>
 
@@ -59,7 +59,7 @@
             android:id="@+id/search_btn"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@android:drawable/ic_search_category_default"
+            android:src="@drawable/ic_search"
             android:layout_centerInParent="true"
             android:padding="10dp"
             />

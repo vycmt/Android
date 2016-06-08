@@ -17,7 +17,7 @@ import se0965.vtth.com.android.model.Food;
  */
 public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
 
-    private final String TAG = getClass().getName();
+    private final String TAG = getClass().getSimpleName();
     private static final String DATABASE_NAME="Food.sqlite";
     private static final int DATABASE_VERSION=2;
 
@@ -42,6 +42,14 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
             TableUtils.dropTable(connectionSource,Food.class,true);
         } catch (SQLException e) {
             Log.i(TAG,"DatabaseHelper can not drop databse", e);
+        }
+    }
+
+    public void clearDatabase() {
+        try {
+            TableUtils.clearTable(connectionSource, Food.class);
+        } catch (SQLException e) {
+            Log.e(TAG, "can't clear database", e);
         }
     }
 }

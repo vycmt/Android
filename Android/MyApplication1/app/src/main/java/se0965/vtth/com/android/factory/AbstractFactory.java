@@ -27,7 +27,7 @@ public class AbstractFactory {
     }
 
     public AbstractFactory(Context context, String sub) {
-        String webAPI = "http://192.186.1.2:8080" + sub;
+        String webAPI = "http://192.168.1.2:8080" + sub;
         restClient = new RestClient(webAPI);
     }
 
