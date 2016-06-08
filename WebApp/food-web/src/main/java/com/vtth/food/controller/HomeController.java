@@ -53,6 +53,16 @@ public class HomeController {
         model.addAttribute("error", "wrong");
         return "login";
     }
+    
+    @RequestMapping(value = "/CreatePost", method = RequestMethod.GET)
+	public String createPost(Model model, HttpSession session) {
+		if (session.getAttribute("username") != null) {
+			model.addAttribute("pageheader", "Create New Post");//set header  at view
+			model.addAttribute("activeTab", "CreatePost");//set active tab at view
+			return "create";
+		}
+		return "redirect:/Admin";
+	}
 
     @RequestMapping(value = "/signOut", method = RequestMethod.GET)
     public String signOut(HttpSession session) {

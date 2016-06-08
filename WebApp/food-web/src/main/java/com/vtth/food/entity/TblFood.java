@@ -16,12 +16,13 @@ public class TblFood implements java.io.Serializable {
     private static final long serialVersionUID = 432529343386898525L;
     private Integer foodId;
     private String foodName;
+    private Integer categoryID;
     private String description;
     private String listMaterial;
     private String images;
     private Integer visitNum;
 
-    public TblFood() {
+    public TblFood(int categoryId, String foodName, String description, String listMaterial) {
     }
 
     @Id
@@ -80,5 +81,13 @@ public class TblFood implements java.io.Serializable {
     public void setVisitNum(Integer visitNum) {
         this.visitNum = visitNum;
     }
+
+	public Integer getCategoryID() {
+		return categoryID;
+	}
+
+	public void setCategoryID(Integer categoryID) {
+		this.categoryID = categoryID;
+	}
 
 }
