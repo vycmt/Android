@@ -48,5 +48,4 @@ public class FoodServiceImp implements FoodService {
     public TblFood increaseNum(int visitNum) {
         return foodDAO.increaseNum(visitNum);
     }
-
 }

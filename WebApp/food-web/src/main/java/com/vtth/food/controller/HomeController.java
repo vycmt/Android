@@ -59,12 +59,12 @@ public class HomeController {
         session.removeAttribute("username");
         return "redirect:/";
     }
-    
+
     @RequestMapping(value = "/Create", method = RequestMethod.GET)
     public String createPost(Model model, HttpSession session) {
         if (session.getAttribute("username") != null) {
-            model.addAttribute("pageheader", "Create New Post");//set header  at view
-            model.addAttribute("activeTab", "CreatePost");//set active tab at view
+            model.addAttribute("pageheader", "Create New Post");// set header at view
+            model.addAttribute("activeTab", "CreatePost");// set active tab at view
             return "create";
         }
         return "redirect:/Admin";

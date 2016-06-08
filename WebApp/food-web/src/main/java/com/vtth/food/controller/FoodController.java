@@ -22,12 +22,10 @@ import com.vtth.food.service.FoodService;
 
 @Controller
 public class FoodController {
-
     @Autowired
     private FoodService foodService;
     @Autowired
     private FoodDetailService foodDetailService;
-
     private Integer foodID;
 
     @RequestMapping(value = "/getFood", method = RequestMethod.GET)
@@ -40,7 +38,7 @@ public class FoodController {
         }
         return null;
     }
-    
+
     @RequestMapping(value = "/getFoodID", method = RequestMethod.GET)
     @ResponseBody
     public TblFood getFoodID(@RequestParam("txtFoodID") String foodID, HttpSession session) {
@@ -58,7 +56,7 @@ public class FoodController {
         }
         return null;
     }
-    
+
     @RequestMapping(value = "/createFoodDetail", method = RequestMethod.POST)
     @ResponseBody
     public TblFooddetail createFoodDetail(@RequestBody TblFooddetail newFoodDetail, HttpSession session) {
@@ -69,19 +67,6 @@ public class FoodController {
         result = foodDetailService.createFoodDetail(foodDetail);
         System.out.println(result);
         return foodDetail;
-    }
-
-    @RequestMapping(value = "/createFood", method = RequestMethod.POST)
-    @ResponseBody
-    public TblFood createFood(@RequestBody TblFood newFood, HttpSession session) {
-        Serializable result;
-        TblFood food = new TblFood(newFood.getCategoryId(), newFood.getFoodName(), newFood.getDescription(),
-                newFood.getImages(), newFood.getListMaterial(), 0);
-        food.setVisitNum(0);
-        result = foodService.createFood(food);
-        foodID = food.getFoodId();
-        System.out.println(foodID);
-        return food;
     }
 
 }

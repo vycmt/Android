@@ -22,12 +22,12 @@ public class TblFood implements java.io.Serializable {
     private String images;
     private Integer visitNum;
 
-    public TblFood() {
+    public TblFood(int categoryId, String foodName, String description, String listMaterial) {
     }
 
-    public TblFood(int categoryId, String foodName, String description, String images,
-            String listMaterial,Integer visitNum) {
-        this.categoryId=categoryId;
+    public TblFood(int categoryId, String foodName, String description, String images, String listMaterial,
+            Integer visitNum) {
+        this.categoryId = categoryId;
         this.foodName = foodName;
         this.description = description;
         this.images = images;
