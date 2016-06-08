@@ -17,8 +17,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.vtth.food.entity.TblFooddetail;
 import com.vtth.food.entity.TblFood;
+import com.vtth.food.entity.TblFooddetail;
 import com.vtth.food.service.FoodDetailService;
 import com.vtth.food.service.FoodService;
 
@@ -57,7 +57,7 @@ public class FoodController {
 				// TODO: handle exception
 				e.printStackTrace();
 			}
-			TblFood result = foodService.getFoodID(foodIDInt);
+			TblFood result = foodService.getFoodId(foodID);
 			return result;
 		}
 		return null;
@@ -65,7 +65,7 @@ public class FoodController {
 	
 	@RequestMapping(value = "/createFoodDetail", method = RequestMethod.POST)
 	@ResponseBody
-	public TblFoodDetail createFoodDetail(@RequestBody TblFooddetail newFoodDetail, HttpSession session) {
+	public TblFooddetail createFoodDetail(@RequestBody TblFooddetail newFoodDetail, HttpSession session) {
 		Serializable result;
 		TblFooddetail foodDetail = new TblFooddetail(foodID, newFoodDetail.getMaterialDetail(),
 				newFoodDetail.getTutorial(), newFoodDetail.getSource());
