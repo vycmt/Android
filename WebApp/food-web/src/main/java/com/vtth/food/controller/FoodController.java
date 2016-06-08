@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.cathl.icook.entity.TblFoodDetail;
 import com.vtth.food.entity.TblFood;
 import com.vtth.food.entity.TblFooddetail;
 import com.vtth.food.service.FoodDetailService;
@@ -95,7 +94,7 @@ public class FoodController {
 	}
 
 	@RequestMapping(value = "/updateFoodDetail", method = RequestMethod.POST)
-	public @ResponseBody TblFoodDetail updateFood(@RequestBody TblFoodDetail foodDetail, HttpSession session) {
+	public @ResponseBody TblFooddetail updateFood(@RequestBody TblFooddetail foodDetail, HttpSession session) {
 		TblFooddetail newFoodDetail = foodDetailService.updateFoodDetail(foodDetail);
 		return newFoodDetail;
 	}
