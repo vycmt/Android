@@ -23,7 +23,7 @@ public class ViewPageAdapter extends FragmentStatePagerAdapter {
 
     CharSequence titles[];
     int numOfTabs;
-    int icons[] = {R.drawable.ic_home, R.drawable.ic_heart};
+    int icons[] = {R.drawable.ic_nav1, R.drawable.ic_nav5};
     Context context;
 
     public ViewPageAdapter(FragmentManager fm, CharSequence[] titles, int numOfTabs, Context context) {

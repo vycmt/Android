@@ -68,19 +68,18 @@
   <div id="sidebar" class="nav-collapse ">
     <!-- sidebar menu start-->
     <ul class="sidebar-menu">
-      <li class=""><a class="" href=""> <i class="icon_house_alt"></i> <span>Dashboard</span>
-      </a></li>
-      <li class="sub-menu"><a href="/food-web/Create" id="postCreate" class=""> <i class="icon_document_alt"></i> <span>Create</span>
-          
-      </a>
+      <li <c:if test="${activeTab eq 'Dashboard'}">class="open"</c:if> ><a href="/food-web/Admin"><i class="fa fa-home"></i> Dashboard</a>
+      
+       <li <c:if test="${activeTab eq 'CreatePost'}">class="open"</c:if>><a href="/food-web/CreatePost" id="postCreate"><i class="fa fa-list-alt"></i>Create<span class="pull-right"><i class="fa fa-chevron-right"></i></span></a>
+      
 <!--         <ul class="sub"> -->
 <!--           <li><a class="" href="form_component.html">Form Elements</a></li> -->
 <!--           <li><a class="" href="form_validation.html">Form Validation</a></li> -->
 <!--         </ul></li> -->
      
 
-      <li class="sub-menu"><a href="/food-web/manage" class=""> <i class="icon_table"></i> <span>Manage</span> 
-      </a>
+      <li <c:if test="${activeTab eq 'ManagePost'}">class="open"</c:if>><a href="/food-web/ManagePost" id="postManage"><i class="fa fa-file-o"></i>Manage <span class="pull-right"><i class="fa fa-chevron-right"></i></span></a>
+      
 <!--         <ul class="sub"> -->
 <!--           <li><a class="" href="">Basic Table</a></li> -->
 <!--         </ul></li> -->
@@ -98,59 +97,48 @@
     </ul>
     <!-- sidebar menu end-->
   </div>
-  </aside> <!--sidebar end--> <!--main content start--> <section id="main-content"> <section class="wrapper">
-  <div class="row">
-    <div class="col-lg-12">
-      <h3 class="page-header">
-        <i class="fa fa fa-bars"></i> Pages
-      </h3>
-      <!--       <ol class="breadcrumb"> -->
-      <!--         <li><i class="fa fa-home"></i><a href="index.html">Home</a></li> -->
-      <!--         <li><i class="fa fa-bars"></i>Pages</li> -->
-      <!--         <li><i class="fa fa-square-o"></i>Pages</li> -->
-      <!--       </ol> -->
-      
-<!--       Include a part of dashboard.jsp -->
+  
+  <!-- Main bar -->
+    <div class="mainbar">
+
+      <!-- Page heading -->
+      <div class="page-head">
+        <h2 class="pull-left"><i class="fa fa-home"></i> ${pageheader}</h2>
+
+        <!-- Breadcrumb -->
+        <div class="bread-crumb pull-right">
+          <a href="index.html"><i class="fa fa-home"></i> Home</a> 
+          <!-- Divider -->
+          <span class="divider">/</span> 
+          <a href="#" class="bread-current">${pageheader}</a>
+        </div>
+
+        <div class="clearfix"></div>
+
+      </div>
+      <!-- Page heading ends -->
 
 
-      <ul class="today-datas">
-        <!-- List #1 -->
-        <li>
-          <!-- Graph -->
-          <div>
-            <span id="todayspark1" class="spark"></span>
-          </div> <!-- Text -->
-          <div class="datas-text">12,000 visitors/day</div>
-        </li>
-        <li>
-          <div>
-            <span id="todayspark2" class="spark"></span>
-          </div>
-          <div class="datas-text">30,000 Pageviews</div>
-        </li>
-        <li>
-          <div>
-            <span id="todayspark3" class="spark"></span>
-          </div>
-          <div class="datas-text">15.66% Bounce Rate</div>
-        </li>
-        <li>
-          <div>
-            <span id="todayspark4" class="spark"></span>
-          </div>
-          <div class="datas-text">$12,000 Revenue/Day</div>
-        </li>
-        <li>
-          <div>
-            <span id="todayspark5" class="spark"></span>
-          </div>
-          <div class="datas-text">15,000000 visitors till date</div>
-        </li>
-      </ul>
-      
+      <!-- Matter -->
+
+      <div class="matter">
+        <div class="container">
+          
+                <!-- Body -->
+                <decorator:body/>
+         
+        </div>
+      </div>
+
+    <!-- Matter ends -->
+
     </div>
-  </div>
-  <!-- page start--> <!-- page end--> </section> </section> <!--main content end--> </section>
+
+   <!-- Mainbar ends -->        
+   <div class="clearfix"></div>
+
+</div>
+<!-- Content ends -->
 
 
   <script src="<c:url value="/resources/js/jquery.js" ></c:url>"></script>

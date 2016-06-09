@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
     ViewPager viewPager;
     ViewPageAdapter adapter;
     SlidingTabLayout tabs;
-    CharSequence Titles[] = {"Tranh chủ", "Yêu thích"};
+    CharSequence Titles[] = {"HomePage", "Personal"};
     int Numboftabs = 2;
 
     @Override
@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tab_main);
 
-        // Creating The ViewPagerAdapter and Passing Fragment Manager, Titles fot the Tabs and Number Of Tabs.
+        // Creating The ViewPagerAdapter and Passing Fragment Manager, Titles for the Tabs and Number Of Tabs.
         adapter = new ViewPageAdapter(getSupportFragmentManager(), Titles, Numboftabs, this);
 
         // Assigning ViewPager View and setting the adapter
