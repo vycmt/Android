@@ -88,5 +88,4 @@ public class HomeController {
         session.removeAttribute("username");
         return "redirect:/";
     }
-
 }

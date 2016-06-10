@@ -11,6 +11,7 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -24,6 +25,7 @@ import com.vtth.food.service.FoodService;
 
 @Controller
 public class FoodController {
+	
     @Autowired
     private FoodService foodService;
     @Autowired
@@ -58,6 +60,42 @@ public class FoodController {
         }
         return null;
     }
+    
+    @RequestMapping(value = "/getFoodDetail", method = RequestMethod.GET)
+	@ResponseBody
+	public TblFooddetail getFoodDetailIDJson(@RequestParam("txtFoodID") String foodID, HttpSession session) {
+		if (session.getAttribute("username") != null) {
+			Integer foodIDInt = null;
+			System.out.println(foodID);
+			try {
+				foodIDInt = Integer.parseInt(foodID);
+			} catch (Exception e) {
+				// TODO: handle exception
+				e.printStackTrace();
+			}
+			TblFooddetail foodDetail = foodDetailService.getFoodDetail(foodIDInt);
+			return foodDetail;
+		}
+		return null;
+	}
+
+	@RequestMapping(value = "/getFoodDetailUser", method = RequestMethod.GET)
+	public String getFoodDetailID(@RequestParam("txtFoodID") String foodID, Model model) {
+
+		Integer foodIDInt = null;
+		System.out.println(foodID);
+		try {
+			foodIDInt = Integer.parseInt(foodID);
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		TblFooddetail foodDetail = foodDetailService.getFoodDetail(foodIDInt);
+		TblFood food = foodService.getFoodID(foodIDInt);
+		model.addAttribute("foodDetail", foodDetail);
+		model.addAttribute("food", food);
+		return "detail";
+	}
 
     @RequestMapping(value = "/createFoodDetail", method = RequestMethod.POST)
     @ResponseBody
@@ -95,5 +133,21 @@ public class FoodController {
         TblFooddetail newFoodDetail = foodDetailService.updateFoodDetail(foodDetail);
         return newFoodDetail;
     }
-
+	
+	@RequestMapping(value = "deleteFood", method = RequestMethod.GET)
+	@ResponseBody
+	public void deleteFood(@RequestParam("txtFoodID") String foodID, HttpSession session) {
+		if (session.getAttribute("username") != null) {
+			Integer foodIDInt = null;
+			System.out.println(foodID);
+			try {
+				foodIDInt = Integer.parseInt(foodID);
+			} catch (Exception e) {
+				// TODO: handle exception
+				e.printStackTrace();
+			}
+			foodDetailService.deleteFoodDetail(foodIDInt);
+			foodService.deleteFood(foodIDInt);
+		}
+	}
 }

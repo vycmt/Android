@@ -17,7 +17,8 @@ public class TblCategory implements java.io.Serializable {
     private Integer categoryId;
     private String categoryName;
 
-    public TblCategory() {
+    public TblCategory(String categoryName) {
+    	this.categoryName = categoryName;
     }
 
     @Id
