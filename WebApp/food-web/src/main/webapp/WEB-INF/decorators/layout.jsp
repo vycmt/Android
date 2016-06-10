@@ -52,7 +52,7 @@
     </ul>
     <!--  search form end -->
   </div>
-
+<div>
   <ul class="nav navbar-nav pull-right">
     <li class="dropdown pull-right"><a data-toggle="dropdown" class="dropdown-toggle" href="#"> <i
         class="fa fa-user"></i> ${sessionScope.username } <b class="caret"></b>
@@ -64,7 +64,8 @@
       </ul></li>
 
   </ul>
-  </header> <!--header end--> <!--sidebar start--> <aside> <aside>
+  </header> <!--header end--> <!--sidebar start--> 
+  <div class="content">
   <div id="sidebar" class="nav-collapse ">
     <!-- sidebar menu start-->
     <ul class="sidebar-menu">
@@ -91,7 +92,7 @@
     </ul>
     <!-- sidebar menu end-->
   </div>
-  </aside> <!-- Main bar -->
+<!-- Main bar -->
   
   
   <div class="mainbar">
@@ -133,7 +134,8 @@
   <!-- Mainbar ends -->
   <div class="clearfix"></div>
 
-  </div>
+</div>
+</section>
   <!-- Content ends --> <script src="<c:url value="/resources/js/jquery.js" ></c:url>"></script> <script
     src="<c:url value="/resources/js/bootstrap.min.js" ></c:url>"></script> <script
     src="<c:url value="/resources/js/jquery.scrollTo.min.js" ></c:url>"></script> <script

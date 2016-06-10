@@ -56,6 +56,10 @@
         <label class="checkbox"> <input type="checkbox" value="remember-me"> Remember me <span
           class="pull-right"> <a href="#"> Forgot Password?</a></span>
         </label>
+        <c:if test="${error eq 'wrong' }">
+        <div class="alert alert-warning">Tên đăng nhập hoặc mật khẩu chưa chính xác
+        </div>
+        </c:if>
         <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
         <button class="btn btn-info btn-lg btn-block" type="submit">Signup</button>
       </div>

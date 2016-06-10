@@ -15,12 +15,20 @@ public class TblFooddetail implements java.io.Serializable {
 
     /** . */
     private static final long serialVersionUID = -3226959737689483321L;
-    private int foodId;
+    private Integer foodId;
     private String materialDetail;
     private String tutorial;
     private String source;
 
-    public TblFooddetail(int foodId, String materialDetail, String tutorial, String source) {
+    public TblFooddetail() {
+    }
+
+    public TblFooddetail(Integer foodId, String materialDetail, String tutorial, String source) {
+        super();
+        this.foodId = foodId;
+        this.materialDetail = materialDetail;
+        this.tutorial = tutorial;
+        this.source = source;
     }
 
     @GenericGenerator(name = "generator", strategy = "foreign", parameters = @Parameter(name = "property", value = "tblFood"))

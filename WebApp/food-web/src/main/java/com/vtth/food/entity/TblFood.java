@@ -21,8 +21,18 @@ public class TblFood implements java.io.Serializable {
     private String listMaterial;
     private String images;
     private Integer visitNum;
+    private String userID;
 
-    public TblFood(int categoryId, String foodName, String description, String listMaterial) {
+    public TblFood() {
+    }
+
+    public TblFood(String foodName, Integer categoryID, String description, String listMaterial, String images,Integer visitNum) {
+        super();
+        this.foodName = foodName;
+        this.categoryID = categoryID;
+        this.description = description;
+        this.listMaterial = listMaterial;
+        this.images = images;
     }
 
     @Id
@@ -82,12 +92,22 @@ public class TblFood implements java.io.Serializable {
         this.visitNum = visitNum;
     }
 
-	public Integer getCategoryID() {
-		return categoryID;
-	}
+    @Column(name = "CategoryID")
+    public Integer getCategoryID() {
+        return categoryID;
+    }
 
-	public void setCategoryID(Integer categoryID) {
-		this.categoryID = categoryID;
-	}
+    public void setCategoryID(Integer categoryID) {
+        this.categoryID = categoryID;
+    }
+
+    @Column(name = "UserID")
+    public String getUserID() {
+        return userID;
+    }
+
+    public void setUserID(String userID) {
+        this.userID = userID;
+    }
 
 }
