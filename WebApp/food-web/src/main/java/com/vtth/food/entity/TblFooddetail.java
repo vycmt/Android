@@ -36,11 +36,11 @@ public class TblFooddetail implements java.io.Serializable {
     @GeneratedValue(generator = "generator")
 
     @Column(name = "FoodID", unique = true, nullable = false)
-    public int getFoodId() {
+    public Integer getFoodId() {
         return this.foodId;
     }
 
-    public void setFoodId(int foodId) {
+    public void setFoodId(Integer foodId) {
         this.foodId = foodId;
     }
 

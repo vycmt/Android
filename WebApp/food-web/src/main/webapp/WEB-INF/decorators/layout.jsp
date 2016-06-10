@@ -64,79 +64,53 @@
       </ul></li>
 
   </ul>
-  </header> <!--header end--> <!--sidebar start--> 
-  <div class="content">
-  <div id="sidebar" class="nav-collapse ">
-    <!-- sidebar menu start-->
-    <ul class="sidebar-menu">
-      <li <c:if test="${activeTab eq 'Dashboard'}">class="open"</c:if>><a href="/food-web/Admin"><i
-          class="fa fa-home"></i> Dashboard</a>
-      <li <c:if test="${activeTab eq 'CreatePost'}">class="open"</c:if>><a href="/food-web/CreatePost"
-        id="postCreate"><i class="fa fa-list-alt"></i>Create<span class="pull-right"><i
-            class="fa fa-chevron-right"></i></span></a> <!--         <ul class="sub"> --> <!--           <li><a class="" href="form_component.html">Form Elements</a></li> -->
-        <!--           <li><a class="" href="form_validation.html">Form Validation</a></li> --> <!--         </ul></li> -->
-      <li <c:if test="${activeTab eq 'ManagePost'}">class="open"</c:if>><a href="/food-web/ManagePost"
-        id="postManage"><i class="fa fa-file-o"></i>Manage <span class="pull-right"><i
-            class="fa fa-chevron-right"></i></span></a> <!--         <ul class="sub"> --> <!--           <li><a class="" href="">Basic Table</a></li> -->
-        <!--         </ul></li> -->
-      <li class="sub-menu "><a href="javascript:;" class=""> <i class="icon_documents_alt"></i> <span>Pages</span>
-          <span class="menu-arrow arrow_carrot-right"></span>
-      </a>
-        <ul class="sub">
-          <li><a class="" href="">Profile</a></li>
-          <li><a class="" href=""><span>Login Page</span></a></li>
-          <li><a class="active" href="">Blank Page</a></li>
-          <li><a class="" href="">404 Error</a></li>
-        </ul></li>
-
-    </ul>
-    <!-- sidebar menu end-->
-  </div>
-<!-- Main bar -->
+  </header> 
   
+  <!--header end--> 
+  <!--sidebar start-->
+  <aside>
+          <div id="sidebar"  class="nav-collapse ">
+              <!-- sidebar menu start-->
+              <ul class="sidebar-menu">                
+                 <li <c:if test="${activeTab eq 'Dashboard'}">class="open"</c:if> ><a href="/food-web/Admin"><i class="fa fa-home"></i> Dashboard</a>
+                 </li>
+                  <li <c:if test="${activeTab eq 'CreatePost'}">class="open"</c:if>><a href="/food-web/CreatePost" id="postCreate"><i class="fa fa-list-alt"></i>Tạo bài viết <span class="pull-right"><i class="fa fa-chevron-right"></i></span></a>
+          </li>  
+          <li <c:if test="${activeTab eq 'ManagePost'}">class="open"</c:if>><a href="/food-web/ManagePost" id="postManage"><i class="fa fa-file-o"></i>Quản lý bài viết <span class="pull-right"><i class="fa fa-chevron-right"></i></span></a>
+          </li> 
+              </ul>
+              <!-- sidebar menu end-->
+          </div>
+      </aside>
+      <!--sidebar end-->
+
+      <!--main content start-->
+      <section id="main-content">
+          <section class="wrapper">
+      <div class="row">
+        <div class="col-lg-12">
+          <h3 class="page-header"><i class="fa fa fa-bars"></i> ${pageheader}</h3>
+          
+        </div>
+      </div>
+              <!-- page start-->
+            <div class="matter">
+                 <div class="container">
+          
+                <!-- Body -->
+                <decorator:body/>
+         
+        </div>
+      </div>
+              <!-- page end-->
+          </section>
+      </section>
+      <!--main content end-->
+  </section>
+  <!-- container section end -->
   
-  <div class="mainbar">
-
-    <!-- Page heading -->
-    <div class="page-head">
-      <h2 class="pull-left">
-        <i class="fa fa-home"></i> ${pageheader}
-      </h2>
-
-      <!-- Breadcrumb -->
-      <div class="bread-crumb pull-right">
-        <a href="index.html"><i class="fa fa-home"></i> Home</a>
-        <!-- Divider -->
-        <span class="divider">/</span> <a href="#" class="bread-current">${pageheader}</a>
-      </div>
-
-      <div class="clearfix"></div>
-
-    </div>
-    <!-- Page heading ends -->
-
-
-    <!-- Matter -->
-
-    <div class="matter">
-      <div class="container">
-
-        <!-- Body -->
-        <decorator:body />
-
-      </div>
-    </div>
-
-    <!-- Matter ends -->
-
-  </div>
-
-  <!-- Mainbar ends -->
-  <div class="clearfix"></div>
-
-</div>
-</section>
-  <!-- Content ends --> <script src="<c:url value="/resources/js/jquery.js" ></c:url>"></script> <script
+ 
+<script src="<c:url value="/resources/js/jquery.js" ></c:url>"></script> <script
     src="<c:url value="/resources/js/bootstrap.min.js" ></c:url>"></script> <script
     src="<c:url value="/resources/js/jquery.scrollTo.min.js" ></c:url>"></script> <script
     src="<c:url value="/resources/js/jquery.nicescroll.js" ></c:url>"></script> <script
