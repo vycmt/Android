@@ -8,17 +8,13 @@ import java.util.List;
 
 import com.vtth.food.entity.TblFood;
 
-/**
- * @author SONY
- *
- */
 public interface FoodDAO {
-        
+
     public Serializable createFood(TblFood newFood);
-    public TblFood getFood (int id);
     public List<TblFood> getFood();
-    public TblFood updateFood(TblFood newFodd);
-    public void deleteFood(int id);
-    public TblFood increaseNum (int visitNum);
-    public List<TblFood> searchByMaterial(String material, int start, int limit);
+    public TblFood getFoodID(int ID);
+    public TblFood updateFood(TblFood newfood);
+    public void deleteFood(int ID);
+    public TblFood incrVisitNum(int id);
+    List<TblFood> searchByMaterial(String materials, int start, int limit);
 }

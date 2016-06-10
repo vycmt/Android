@@ -70,18 +70,18 @@ public class HomeController {
     }
     
     @RequestMapping(value = "/ManagePost", method = RequestMethod.GET)
-	public String managePost(Model model, HttpSession session) {
-		if (session.getAttribute("username") != null ) {
-			List<TblFood> result = new ArrayList<TblFood>();
-			result = foodService.getFood();
-			model.addAttribute("foodPost", result);
-			model.addAttribute("pageheader", "Quản lý bài đăng");//set header  at view
-			model.addAttribute("activeTab", "ManagePost");//set active tab at view
-			return "managepost";
-		}
-		/* model.addAttribute("user", null); */
-		return "redirect:/Admin";
-	}
+    public String managePost(Model model, HttpSession session) {
+        if (session.getAttribute("username") != null) {
+            List<TblFood> result = new ArrayList<TblFood>();
+            result = foodService.getFood();
+            model.addAttribute("foodPost", result);
+            model.addAttribute("pageheader", "Quản lý bài đăng");//set header  at view
+            model.addAttribute("activeTab", "ManagePost");//set active tab at view
+            return "managepost";
+        }
+        /* model.addAttribute("user", null); */
+        return "redirect:/Admin";
+    }
 
     @RequestMapping(value = "/signOut", method = RequestMethod.GET)
     public String signOut(HttpSession session) {

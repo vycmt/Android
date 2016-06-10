@@ -8,16 +8,13 @@ import java.util.List;
 
 import com.vtth.food.entity.TblFood;
 
-/**
- * @author SONY
- *
- */
 public interface FoodService {
 
     public Serializable createFood(TblFood newFood);
-    public TblFood getFoodId (int foodID);
     public List<TblFood> getFood();
-    public TblFood updateFood(TblFood newFodd);
-    public void deleteFood(int id);
-    public TblFood increaseNum (int visitNum);
+    public List<TblFood> getFoodUser(String username);
+    public TblFood getFoodID(int ID);
+    public TblFood updateFood(TblFood newfood);
+    public void deleteFood(int ID);
+    public TblFood incrVisitNum(int id);
 }

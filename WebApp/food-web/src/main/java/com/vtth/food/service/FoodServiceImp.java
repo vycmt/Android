@@ -4,6 +4,7 @@
 package com.vtth.food.service;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.transaction.Transactional;
@@ -18,34 +19,52 @@ import com.vtth.food.entity.TblFood;
 @Transactional
 public class FoodServiceImp implements FoodService {
 
-    @Autowired
-    FoodDAO foodDAO;
-
     public FoodServiceImp() {
-        System.out.println("FoodServiceImp()");
+        System.out.println("FoodServiceImpl()");
     }
 
-    public Serializable createFood(TblFood newFood) {
-        return foodDAO.createFood(newFood);
-    }
-
-    public TblFood getFoodId(int id) {
-        return foodDAO.getFood(id);
-    }
+    @Autowired
+    private FoodDAO foodDAO;
 
     public List<TblFood> getFood() {
         return foodDAO.getFood();
     }
 
-    public TblFood updateFood(TblFood newFodd) {
-        return foodDAO.updateFood(newFodd);
+    public TblFood getFoodID(int ID) {
+        // TODO Auto-generated method stub
+        return foodDAO.getFoodID(ID);
     }
 
-    public void deleteFood(int id) {
-        foodDAO.deleteFood(id);
+    public TblFood updateFood(TblFood newfood) {
+        // TODO Auto-generated method stub
+        return foodDAO.updateFood(newfood);
     }
 
-    public TblFood increaseNum(int visitNum) {
-        return foodDAO.increaseNum(visitNum);
+    public void deleteFood(int ID) {
+        // TODO Auto-generated method stub
+        foodDAO.deleteFood(ID);
     }
+
+    public Serializable createFood(TblFood newFood) {
+        // TODO Auto-generated method stub
+        return foodDAO.createFood(newFood);
+    }
+
+    public List<TblFood> getFoodUser(String username) {
+        // TODO Auto-generated method stub
+        List<TblFood> allFood = getFood();
+        List<TblFood> foodUser = new ArrayList<TblFood>();
+        for (TblFood tblFood : allFood) {
+            if (tblFood.getUserID().equals(username)) {
+                foodUser.add(tblFood);
+            }
+
+        }
+        return foodUser;
+    }
+
+    public TblFood incrVisitNum(int id) {
+        return foodDAO.incrVisitNum(id);
+    }
+
 }
