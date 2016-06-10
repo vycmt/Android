@@ -24,7 +24,11 @@
 
 <link href="<c:url value="/resources/css/style.css" ></c:url>" rel="stylesheet">
 
+<link href="<c:url value="/resources/css/style2.css" ></c:url>" rel="stylesheet">
+
 <link href="<c:url value="/resources/css/style-responsive.css" ></c:url>" rel="stylesheet">
+
+ <link rel="stylesheet" href="<c:url value="/resources/css/jquery.dataTables.css" ></c:url>"> 
 
 
 </head>
@@ -110,11 +114,13 @@
   <!-- container section end -->
   
  
-<script src="<c:url value="/resources/js/jquery.js" ></c:url>"></script> <script
-    src="<c:url value="/resources/js/bootstrap.min.js" ></c:url>"></script> <script
+<script src="<c:url value="/resources/js/jquery.js" ></c:url>"></script> 
+<script src="<c:url value="/resources/js/bootstrap.min.js" ></c:url>"></script> <script
     src="<c:url value="/resources/js/jquery.scrollTo.min.js" ></c:url>"></script> <script
     src="<c:url value="/resources/js/jquery.nicescroll.js" ></c:url>"></script> <script
     src="<c:url value="/resources/js/scripts.js" ></c:url>"></script>
+    <script src="<c:url value="/resources/js/jquery.dataTables.min.js" ></c:url>"></script> <!-- Data tables -->
+    
 </body>
 </html>
 
