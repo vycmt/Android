@@ -38,11 +38,15 @@ public class SearchResultActivity extends AppCompatActivity implements OnTaskCom
         checkSupportAndroidVersion();
         setTitle("");
         Intent intent = getIntent();
+        // lấy ra Parameter từ Fragment
         textSearch = intent.getStringExtra(TabSearch.TEXT_SEARCH_EXTRA);
+
         executeData(textSearch, String.valueOf(0));
+
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
+
         listView = (ListView) findViewById(ResultAdapter.LAYOUT_RESOURCES_ID);
         listView.setOnScrollListener(onScrollListener());
 
@@ -61,7 +65,7 @@ public class SearchResultActivity extends AppCompatActivity implements OnTaskCom
     // tích hợp Option Menu vào Fragment
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case android.R.id.home:
                 onBackPressed();
                 return true;
@@ -93,8 +97,8 @@ public class SearchResultActivity extends AppCompatActivity implements OnTaskCom
                 int count = listView.getCount();
 
                 if (scrollState == SCROLL_STATE_IDLE) {
-                    if (listView.getLastVisiblePosition() >= count -threshold && pageCount < pageCount + 2) {
-                        if (foods.size() >= 10*pageCount) {
+                    if (listView.getLastVisiblePosition() >= count - threshold && pageCount < pageCount + 2) {
+                        if (foods.size() >= 10 * pageCount) {
                             executeData(textSearch, String.valueOf(count + 1));
                             adapter.notifyDataSetChanged();
                         }
@@ -118,7 +122,7 @@ public class SearchResultActivity extends AppCompatActivity implements OnTaskCom
 
     private void checkSupportAndroidVersion() {
         int currentApiVersion = android.os.Build.VERSION.SDK_INT;
-        if (currentApiVersion >= android.os.Build.VERSION_CODES.LOLLIPOP){
+        if (currentApiVersion >= android.os.Build.VERSION_CODES.LOLLIPOP) {
             Toolbar toolbar = (Toolbar) findViewById(R.id.activity_toolbar);
             setSupportActionBar(toolbar);
         }
@@ -127,11 +131,14 @@ public class SearchResultActivity extends AppCompatActivity implements OnTaskCom
     @Override
     public void onTaskCompleted(Object list) {
         if (adapter == null) {
-            if (list != null)
+            if (list != null) {
                 foods = (List<Food>) list;
+            }
             else foods = new ArrayList<>();
-            adapter = new ResultAdapter(getBaseContext(),foods);
+
+            adapter = new ResultAdapter(getBaseContext(), foods);
             adapter.notifyDataSetChanged();
+
             listView.setAdapter(adapter);
         } else {
             foods.addAll((Collection<? extends Food>) list);

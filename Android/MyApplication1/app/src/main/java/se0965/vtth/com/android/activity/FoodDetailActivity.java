@@ -40,7 +40,9 @@ public class FoodDetailActivity extends AppCompatActivity implements OnTaskCompl
         //get data
         Intent intent = getIntent();
         food = (Food) intent.getSerializableExtra(SearchResultActivity.DATA_EXCHANGE_OBJECT);
+
         FoodDetailAsyncLoader loader = new FoodDetailAsyncLoader(this, FoodDetailActivity.this);
+
         loader.execute(String.valueOf(food.getFoodId()));
 
         setTitle("");
