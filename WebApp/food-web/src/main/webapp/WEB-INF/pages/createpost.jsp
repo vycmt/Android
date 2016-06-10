@@ -35,7 +35,7 @@
 						</br> <label class="col-lg-2 control-label">Tên món</label>
 						<div class="col-lg-5">
 							<input type="text" class="form-control"
-								placeholder="Input food name Here">
+								placeholder="Input food name Here" id="txtFoodName">
 						</div>
 					</div>
 					<div class="form-group">
@@ -49,40 +49,40 @@
 					<div class="form-group">
 						<label class="col-lg-2 control-label">Miêu tả</label>
 						<div class="col-lg-5">
-							<textarea class="cleditor" name="input"></textarea>
+							<textarea class="cleditor" name="input" id="txtDescription"></textarea>
 						</div>
 					</div>
 					<div class="form-group">
 						<label class="col-lg-2 control-label">Danh sách nguyên
 							liệu</label>
 						<div class="col-lg-5">
-							<textarea class="cleditor" name="input"></textarea>
+							<textarea class="cleditor" name="input" id="txtMaterialLst"></textarea>
 						</div>
 					</div>
 					<div class="form-group">
 						<label class="col-lg-2 control-label">Chi tiết</label>
 						<div class="col-lg-5">
-							<textarea class="cleditor" name="input"></textarea>
+							<textarea class="cleditor" name="input" id="txtMaterialDetail"></textarea>
 						</div>
 					</div>
 					<div class="form-group">
 						<label class="col-lg-2 control-label">Hướng dẫn</label>
 						<div class="col-lg-6">
-							<textarea class="cleditor" name="input"></textarea>
+							<textarea class="cleditor" name="input" id="txtContent"></textarea>
 						</div>
 					</div>
 					<div class="form-group">
 						<label class="col-lg-2 control-label">Nguồn</label>
 						<div class="col-lg-6">
 							<input type="text" class="form-control imagelink"
-								placeholder="Input title Here">
+								placeholder="Input title Here" id="txtSource">
 						</div>
 					</div>
 
 					<div class="form-group">
 						<div class="col-lg-offset-2 col-lg-6">
-							<button type="button" class="btn btn-sm btn-default">Submit</button>
-							<button type="reset" class="btn btn-sm btn-primary">Cancel</button>
+							<button type="button" class="btn btn-sm btn-default" id="btnSubmit">Submit</button>
+							<button type="reset" class="btn btn-sm btn-primary" id="btnReset">Cancel</button>
 						</div>
 					</div>
 				</form>
