@@ -106,6 +106,7 @@ public class TabSearch extends Fragment {
 
                 if (!textSearch.equals("")){
                     Intent intent = new Intent(getActivity(), SearchResultActivity.class);
+                    // Tương tự như khi truyền parameter trong Java
                     intent.putExtra(TEXT_SEARCH_EXTRA, textSearch);
                     startActivity(intent);
                     getActivity().overridePendingTransition(R.anim.pull_in_left, R.anim.push_out_left);

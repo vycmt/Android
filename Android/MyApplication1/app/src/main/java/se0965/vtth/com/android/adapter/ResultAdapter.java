@@ -21,14 +21,12 @@ import se0965.vtth.com.android.model.Food;
  */
 public class ResultAdapter extends BaseAdapter {
 
+    // bắt buộc phải có Resource_ID
     public static final int LAYOUT_RESOURCES_ID = R.id.search_result_lv;
 
     List<Food> list;
     Context context;
     private static LayoutInflater inflater = null;
-
-    // Must have constructor
-
 
     public ResultAdapter(Context context, List<Food> foods) {
         this.list = foods;
