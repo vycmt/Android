@@ -2,12 +2,12 @@ package com.vtth.food.dto;
 
 import java.io.Serializable;
 
-import com.vtth.food.entity.TblCategory;
 import com.vtth.food.entity.TblFood;
-import com.vtth.food.entity.TblFooddetail;
 
 public class FoodDTO implements Serializable {
 
+    /** . */
+    private static final long serialVersionUID = -1993445510662640985L;
     private int foodId;
     private String foodName;
     private String description;

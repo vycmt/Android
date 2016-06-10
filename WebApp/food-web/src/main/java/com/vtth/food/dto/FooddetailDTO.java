@@ -18,15 +18,14 @@
  */
 package com.vtth.food.dto;
 
-import com.vtth.food.entity.TblFood;
+import java.io.Serializable;
+
 import com.vtth.food.entity.TblFooddetail;
 
-/**
- * @author KMF
- *
- */
-public class FooddetailDTO {
+public class FooddetailDTO implements Serializable {
 
+    /** . */
+    private static final long serialVersionUID = -1000149088892927026L;
     private int foodId;
     private String materialDetail;
     private String tutorial;
@@ -43,12 +42,8 @@ public class FooddetailDTO {
         this.tutorial = tutorial;
         this.source = source;
     }
-    
-    
-    /**
-     * @param foodDetail : Constructor with data from Entity
-     */
-    public FooddetailDTO (TblFooddetail foodDetail){
+
+    public FooddetailDTO(TblFooddetail foodDetail) {
         this.foodId = foodDetail.getFoodId();
         this.materialDetail = foodDetail.getMaterialDetail();
         this.tutorial = foodDetail.getTutorial();

@@ -14,9 +14,10 @@ public class TblFood implements java.io.Serializable {
 
     /** . */
     private static final long serialVersionUID = 432529343386898525L;
+    
     private Integer foodId;
     private String foodName;
-    private Integer categoryID;
+    private int categoryID;
     private String description;
     private String listMaterial;
     private String images;
@@ -26,7 +27,8 @@ public class TblFood implements java.io.Serializable {
     public TblFood() {
     }
 
-    public TblFood(String foodName, Integer categoryID, String description, String listMaterial, String images,Integer visitNum) {
+    public TblFood(String foodName, int categoryID, String description, String listMaterial, 
+            String images, Integer visitNum) {
         super();
         this.foodName = foodName;
         this.categoryID = categoryID;
@@ -93,11 +95,11 @@ public class TblFood implements java.io.Serializable {
     }
 
     @Column(name = "CategoryID")
-    public Integer getCategoryID() {
+    public int getCategoryID() {
         return categoryID;
     }
 
-    public void setCategoryID(Integer categoryID) {
+    public void setCategoryID(int categoryID) {
         this.categoryID = categoryID;
     }
 

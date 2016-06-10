@@ -71,7 +71,7 @@ public class HomeController {
     
     @RequestMapping(value = "/ManagePost", method = RequestMethod.GET)
 	public String managePost(Model model, HttpSession session) {
-		if (session.getAttribute("username") != null && (Integer) session.getAttribute("role") == 0) {
+		if (session.getAttribute("username") != null ) {
 			List<TblFood> result = new ArrayList<TblFood>();
 			result = foodService.getFood();
 			model.addAttribute("foodPost", result);
