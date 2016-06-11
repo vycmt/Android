@@ -134,7 +134,11 @@ public class SearchResultActivity extends AppCompatActivity implements OnTaskCom
             if (list != null) {
                 foods = (List<Food>) list;
             }
-            else foods = new ArrayList<>();
+            else
+            {
+                foods = new ArrayList<>();
+
+            }
 
             adapter = new ResultAdapter(getBaseContext(), foods);
             adapter.notifyDataSetChanged();

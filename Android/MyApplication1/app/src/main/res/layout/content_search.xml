@@ -38,14 +38,14 @@
             style="@style/ItemTextSearch"
             android:visibility="gone" />
 
-        <android.support.design.widget.FloatingActionButton
+        <!--<android.support.design.widget.FloatingActionButton
             android:id="@+id/search_fab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="left"
             android:layout_margin="16dp"
             android:src="@android:drawable/ic_input_add"
-            />
+            />-->
 
     </LinearLayout>
 

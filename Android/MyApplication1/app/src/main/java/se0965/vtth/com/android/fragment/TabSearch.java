@@ -46,7 +46,7 @@ public class TabSearch extends Fragment {
         btnSearch = (ImageView) view.findViewById(R.id.search_btn);
 
         // Tìm floatingaction theo id
-        FloatingActionButton fab = (FloatingActionButton) view.findViewById(R.id.search_fab);
+        /*FloatingActionButton fab = (FloatingActionButton) view.findViewById(R.id.search_fab);
         count = 2;
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,7 +72,7 @@ public class TabSearch extends Fragment {
                         break;
                 }
             }
-        });
+        });*/
         hideKeyboard();
         btnSearch.setOnClickListener(new View.OnClickListener() {
             @Override
