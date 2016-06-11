@@ -130,11 +130,14 @@
   <!-- container section end -->
 
 
+<span class="totop"><a href="#"><i class="fa fa-chevron-up"></i></a></span> 
+
   <script src="<c:url value="/resources/js/jquery.js" ></c:url>"></script>
   <script src="<c:url value="/resources/js/bootstrap.min.js" ></c:url>"></script>
   <script src="<c:url value="/resources/js/jquery.scrollTo.min.js" ></c:url>"></script>
   <script src="<c:url value="/resources/js/jquery.nicescroll.js" ></c:url>"></script>
   <script src="<c:url value="/resources/js/scripts.js" ></c:url>"></script>
+    <script src="<c:url value="/resources/js/jquery.slimscroll.min.js" ></c:url>"></script>
   <script src="<c:url value="/resources/js/jquery-ui.min.js" ></c:url>"></script>
   <!-- jQuery UI -->
   <script src="<c:url value="/resources/js/respond.min.js" ></c:url>"></script>
