@@ -16,7 +16,7 @@
 
 <link href="<c:url value="/resources/css/bootstrap.min.css" ></c:url>" rel="stylesheet">
 
-<link href="<c:url value="/resources/css/bootstrap-theme.css" ></c:url>" rel="stylesheet">
+<%-- <link href="<c:url value="/resources/css/bootstrap-theme.css" ></c:url>" rel="stylesheet"> --%>
 
 <link href="<c:url value="/resources/css/elegant-icons-style.css" ></c:url>" rel="stylesheet">
 
@@ -28,8 +28,20 @@
 
 <link href="<c:url value="/resources/css/style-responsive.css" ></c:url>" rel="stylesheet">
 
- <link rel="stylesheet" href="<c:url value="/resources/css/jquery.dataTables.css" ></c:url>"> 
+<link rel="stylesheet" href="<c:url value="/resources/css/widgets.css" ></c:url>">
+<!-- Data tables -->
+<link rel="stylesheet" href="<c:url value="/resources/css/jquery.dataTables.css" ></c:url>">
+<!-- Bootstrap toggle -->
+<link rel="stylesheet" href="<c:url value="/resources/css/jquery.onoff.css" ></c:url>">
 
+<link rel="stylesheet" href="<c:url value="/resources/css/jquery-ui.css" ></c:url>"> 
+
+<link rel="stylesheet" href="<c:url value="/resources/css/rateit.css" ></c:url>">
+  <!-- Date picker -->
+<link rel="stylesheet" href="<c:url value="/resources/css/bootstrap-datetimepicker.min.css" ></c:url>">
+
+
+<!-- Star rating -->
 
 </head>
 
@@ -43,7 +55,7 @@
       <i class="icon_menu"></i>
     </div>
   </div>
-  <a href="index.html" class="logo">Nice <span class="lite">ADMIN</span></a> <!--logo end-->
+  <a class="navbar-brand" href="">ADMIN</a>
 
   <div class="nav search-row" id="top_menu">
     <!--  search form start -->
@@ -56,71 +68,91 @@
     </ul>
     <!--  search form end -->
   </div>
-<div>
-  <ul class="nav navbar-nav pull-right">
-    <li class="dropdown pull-right"><a data-toggle="dropdown" class="dropdown-toggle" href="#"> <i
-        class="fa fa-user"></i> ${sessionScope.username } <b class="caret"></b>
-    </a> <!-- Dropdown menu -->
-      <ul class="dropdown-menu">
-        <li><a href="#"><i class="fa fa-user"></i> Profile</a></li>
-        <li><a href="#"><i class="fa fa-cogs"></i> Settings</a></li>
-        <li><a href="/food-web/signOut"><i class="fa fa-sign-out"></i> Logout</a></li>
-      </ul></li>
-
-  </ul>
-  </header> 
-  
-  <!--header end--> 
-  <!--sidebar start-->
-  <aside>
-          <div id="sidebar"  class="nav-collapse ">
-              <!-- sidebar menu start-->
-              <ul class="sidebar-menu">                
-                 <li <c:if test="${activeTab eq 'Dashboard'}">class="open"</c:if> ><a href="/food-web/Admin"><i class="fa fa-home"></i> Dashboard</a>
-                 </li>
-                  <li <c:if test="${activeTab eq 'CreatePost'}">class="open"</c:if>><a href="/food-web/CreatePost" id="postCreate"><i class="fa fa-list-alt"></i>Tạo bài viết <span class="pull-right"><i class="fa fa-chevron-right"></i></span></a>
-          </li>  
-          <li <c:if test="${activeTab eq 'ManagePost'}">class="open"</c:if>><a href="/food-web/ManagePost" id="postManage"><i class="fa fa-file-o"></i>Quản lý bài viết <span class="pull-right"><i class="fa fa-chevron-right"></i></span></a>
-          </li> 
-              </ul>
-              <!-- sidebar menu end-->
-          </div>
-      </aside>
-      <!--sidebar end-->
-
-      <!--main content start-->
-      <section id="main-content">
-          <section class="wrapper">
+  <div>
+    <ul class="nav navbar-nav pull-right">
+          <li class="dropdown pull-right">            
+            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+              <i class="fa fa-user"></i> ${sessionScope.username } <b class="caret"></b>              
+            </a>
+            
+            <!-- Dropdown menu -->
+            <ul class="dropdown-menu">
+              <li><a href="#"><i class="fa fa-user"></i> Profile</a></li>
+              <li><a href="#"><i class="fa fa-cogs"></i> Settings</a></li>
+              <li><a href="/food-web/signOut"><i class="fa fa-sign-out"></i> Logout</a></li>
+            </ul>
+          </li>
+          
+        </ul>
+    </div>
+  </header> <!--header end--> <!--sidebar start--> <aside>
+  <div id="sidebar" class="nav-collapse ">
+    <!-- sidebar menu start-->
+    <ul class="sidebar-menu">
+      <li <c:if test="${activeTab eq 'Dashboard'}">class="open"</c:if>><a href="/food-web/Admin"><i
+          class="fa fa-home"></i> Dashboard</a></li>
+      <li <c:if test="${activeTab eq 'CreatePost'}">class="open"</c:if>><a href="/food-web/CreatePost"
+        id="postCreate"><i class="fa fa-list-alt"></i>Tạo bài viết <span class="pull-right"><i
+            class="fa fa-chevron-right"></i></span></a></li>
+      <li <c:if test="${activeTab eq 'ManagePost'}">class="open"</c:if>><a href="/food-web/ManagePost"
+        id="postManage"><i class="fa fa-file-o"></i>Quản lý bài viết <span class="pull-right"><i
+            class="fa fa-chevron-right"></i></span></a></li>
+    </ul>
+    <!-- sidebar menu end-->
+  </div>
+  </aside> <!--sidebar end--> <!--main content start-->
+  <div>
+    <div>
       <div class="row">
         <div class="col-lg-12">
-          <h3 class="page-header"><i class="fa fa fa-bars"></i> ${pageheader}</h3>
-          
+          <h3 class="page-header">
+            <i class="fa fa fa-bars"></i> ${pageheader}
+          </h3>
+
         </div>
       </div>
-              <!-- page start-->
-            <div class="matter">
-                 <div class="container">
-          
-                <!-- Body -->
-                <decorator:body/>
-         
+
+      <!-- page start-->
+      <div class="matter">
+        <div class="container">
+
+          <!-- Body -->
+          <decorator:body />
+
         </div>
       </div>
-              <!-- page end-->
-          </section>
-      </section>
-      <!--main content end-->
-  </section>
+
+      <!-- page end-->
+    </div>
+  </div>
+  <!--main content end--> </section>
   <!-- container section end -->
-  
- 
-<script src="<c:url value="/resources/js/jquery.js" ></c:url>"></script> 
-<script src="<c:url value="/resources/js/bootstrap.min.js" ></c:url>"></script> <script
-    src="<c:url value="/resources/js/jquery.scrollTo.min.js" ></c:url>"></script> <script
-    src="<c:url value="/resources/js/jquery.nicescroll.js" ></c:url>"></script> <script
-    src="<c:url value="/resources/js/scripts.js" ></c:url>"></script>
-    <script src="<c:url value="/resources/js/jquery.dataTables.min.js" ></c:url>"></script> <!-- Data tables -->
-    
+
+
+  <script src="<c:url value="/resources/js/jquery.js" ></c:url>"></script>
+  <script src="<c:url value="/resources/js/bootstrap.min.js" ></c:url>"></script>
+  <script src="<c:url value="/resources/js/jquery.scrollTo.min.js" ></c:url>"></script>
+  <script src="<c:url value="/resources/js/jquery.nicescroll.js" ></c:url>"></script>
+  <script src="<c:url value="/resources/js/scripts.js" ></c:url>"></script>
+  <script src="<c:url value="/resources/js/jquery-ui.min.js" ></c:url>"></script>
+  <!-- jQuery UI -->
+  <script src="<c:url value="/resources/js/respond.min.js" ></c:url>"></script>
+  <script src="<c:url value="/resources/js/jquery-ui.min.js" ></c:url>"></script>
+
+  <!-- Full Google Calendar - Calendar -->
+  <script src="<c:url value="/resources/js/jquery.rateit.min.js" ></c:url>"></script>
+  <!-- RateIt - Star rating -->
+  <script src="<c:url value="/resources/js/jquery.prettyPhoto.js" ></c:url>"></script>
+  <!-- prettyPhoto -->
+  <script src="<c:url value="/resources/js/jquery.slimscroll.min.js" ></c:url>"></script>
+  <!-- jQuery Slim Scroll -->
+  <script src="<c:url value="/resources/js/jquery.dataTables.min.js" ></c:url>"></script>
+  <!-- Data tables -->
+
+  <script type="text/javascript" src='<c:url value="/resources/js/ajaxload.js"></c:url>'></script>
+  <!-- load database -->
+
+
 </body>
 </html>
 

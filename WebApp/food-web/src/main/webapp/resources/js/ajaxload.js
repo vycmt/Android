@@ -7,12 +7,11 @@ $(document).ready(function() {
 	$('#data-table-1').on('click', '.btn-check',function(e){ 
 		var foodID=$(this).attr('value');
 		$.ajax({
-			url: "/iCook/getFoodID?txtFoodID="+foodID,
+			url: "/food-web/getFoodID?txtFoodID="+foodID,
 			type: "GET",
 			success: function(food) {
-				food.status = 0;
 				$.ajax({
-					 url: "/iCook/updateFood", 
+					 url: "/food-web/updateFood", 
 					 type: 'POST', 
 					 dataType: 'json',
 					 data: JSON.stringify(food), 
@@ -26,14 +25,12 @@ $(document).ready(function() {
 				});
 			}
 		});
-		var td = $(this).closest('tr').find('td.statustd');
-		 td.html("Đã Duyệt");
 	});
 	$("#btnDelete").click(function(){
 		$('input:checkBox[type=checkbox]:checked').each(function () {
 			   var sThisVal = $(this).val() ;
 			   $.ajax({
-					url: "/iCook/deleteFood?txtFoodID="+sThisVal,
+					url: "/food-web/deleteFood?txtFoodID="+sThisVal,
 					type: "GET",
 					success: function(food) {
 						$('#'+sThisVal).remove();
@@ -45,18 +42,18 @@ $(document).ready(function() {
 		var foodDetail =  JSON.stringify({
 			"materialDetail": $("#txtMaterialDetail").val(),
 			"tutorial": $("#txtContent").val(),
-			"source": $("#txtSource").val(),
-			"user":"ADMIN"
+			"source": $("#txtSource").val()
+			
 		});
 		var food =  JSON.stringify({
 			"categoryId": $("#cbbCategory").val(),
 			"foodName": $("#txtFoodName").val(),
 			"description": $("#txtDescription").val(),
-			"linkImage":$("#txtImageLink").val(),
+			"images":$("#txtImages").val(),
 			"listMaterial":$("#txtMaterialLst").val()
 		});
     	$.ajax({
-			url:"/iCook/createFood",
+			url:"/food-web/createFood",
 			type: 'POST', 
 			 dataType: 'json',
 			 data: (food), 
@@ -67,7 +64,7 @@ $(document).ready(function() {
 		        success: function(foodNew) {
 		        	var foodname=foodNew.foodName;
 		    		$.ajax({
-		    			url:"/iCook/createFoodDetail",
+		    			url:"/food-web/createFoodDetail",
 		    			type: 'POST', 
 		    			 dataType: 'json',
 		    			 data: (foodDetail), 
@@ -93,17 +90,17 @@ $(document).ready(function() {
 	});
 	$('.imagelink').focusout(function(){
 		$('#imageFood').attr("src",$('#txtImage').val());
-		$('#imageFood').attr("src",$('#txtImageLink').val());
-		$("#imageZoom").attr("href", $('#txtImageLink').val());
+		$('#imageFood').attr("src",$('#txtImages').val());
+		$("#imageZoom").attr("href", $('#txtImages').val());
 		$("#imageZoom").attr("href", $('#txtImage').val());
 	});
 	$('.imagelink').keyup(function(e){
 	    if(e.keyCode == 13)
 	    {
 	    	$('#imageFood').attr("src",$('#txtImage').val());
-	    	$('#imageFood').attr("src",$('#txtImageLink').val());
+	    	$('#imageFood').attr("src",$('#txtImages').val());
 	    	$("#imageZoom").attr("href", $('#txtImage').val());
-	    	$('#imageZoom').attr("href",$('#txtImageLink').val());
+	    	$('#imageZoom').attr("href",$('#txtImages').val());
 	    }
 	});
 	$('.imagelink').focus(function() {
@@ -115,7 +112,7 @@ $(document).ready(function() {
 	$('#data-table-1').on('click', '.btn-danger',function(e){ 
 		var foodID=$(this).attr('value');
 		$.ajax({
-			url: "/iCook/deleteFood?txtFoodID="+foodID,
+			url: "/food-web/deleteFood?txtFoodID="+foodID,
 			type: "GET",
 			success: function(food) {
 				alert(food);
@@ -124,27 +121,27 @@ $(document).ready(function() {
 		});
 	    $(this).closest("tr").remove();
 	});
-	$('#data-table-1').on('click', '.btn-warning',function(e){
+	$('#data-table-1').on('click', '.btn-success',function(e){
 		
 		var foodID=$(this).attr('value');
 		$.ajax({
-	        url: "/iCook/getFoodID?txtFoodID="+foodID,
+	        url: "/food-web/getFoodID?txtFoodID="+foodID,
 	        type: "GET",
 	        success: function(category) {
 	        	$("#txtID").val(category.foodId);
 //	   
 	        	$("#txtView").val(category.visitNum);
 	        	$("#cbbCategory").val(category.categoryId);
-	        	$('.imagelink').val(category.linkImage);
-	        	$("#imageZoom").attr("href", category.linkImage);
-	        	$('#imageFood').attr("src",category.linkImage);
+	        	$('.imagelink').val(category.images);
+	        	$("#imageZoom").attr("href", category.images);
+	        	$('#imageFood').attr("src",category.images);
 	        	$("#myModal .modal-title").html('<b>'+category.foodName+'</b>');
 	        	$("#myModal .modal-body .foodName").val(category.foodName);
 	        	$("#myModal .modal-body #txtDescription").html(category.description);
 	        	$("#myModal .modal-body #txtMaterial").html(category.listMaterial);
 	        	$("#txtUser").val(category.userID);
 	        	$.ajax({
-	    	        url: "/iCook/getFoodDetail?txtFoodID="+foodID,
+	    	        url: "/food-web/getFoodDetail?txtFoodID="+foodID,
 	    	        type: "GET",
 	    	        success: function(foodDetail) {
 	    	        	$("#myModal .modal-body #txtContent").html(foodDetail.tutorial);
@@ -162,7 +159,7 @@ $(document).ready(function() {
 	});
 	function loadCatalog(){
 		$.ajax({
-	        url: "/iCook/getCategory",
+	        url: "/food-web/getCategory",
 	        type: "GET",
 	        success: function(category) {
 	            for (var i = 0; i < category.length; i++) {
@@ -182,7 +179,7 @@ $(document).ready(function() {
 			"foodId" :$("#txtID").val(),
 		    "foodName" : $('#txtFoodName').val() ,
 		    "description": $('#txtDescription').val() , 
-		    "linkImage": $('#txtImage').val(), 
+		    "images": $('#txtImage').val(), 
 		    "listMaterial": $('#txtMaterial').val(), 
 		    "categoryId": $( "#cbbCategory option:selected" ).val(),
 		    "visitNum": $( "#txtView" ).val()
@@ -195,7 +192,7 @@ $(document).ready(function() {
 		    "user": $("#txtUser").val()
 		});
 		$.ajax({
-			 url: "/iCook/updateFood", 
+			 url: "/food-web/updateFood", 
 			 type: 'POST', 
 			 dataType: 'json',
 			 data: (food), 
@@ -205,7 +202,7 @@ $(document).ready(function() {
 		        }, 
 			 success: function(newfood) { 
 				 $.ajax({
-					 url: "/iCook/updateFoodDetail", 
+					 url: "/food-web/updateFoodDetail", 
 					 type: 'POST', 
 					 dataType: 'json',
 					 data: (foodDetail), 
@@ -225,7 +222,7 @@ $(document).ready(function() {
 			"categoryName" :$("#txtCatelog").val()
 		});
  		$.ajax({
-			 url: "/iCook/createCaltalogue", 
+			 url: "/food-web/createCaltalogue", 
 			 type: 'POST', 
 			 dataType: 'json',
 			 data: (dat), 

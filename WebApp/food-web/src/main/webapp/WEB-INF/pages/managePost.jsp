@@ -30,7 +30,7 @@
 								<thead>
 									<tr>
 										<th>ID</th>
-										<th>Mòn ăn</th>
+										<th>Món ăn</th>
 										<th>Ảnh đại diện</th>
 										<th>Action</th>
 										<th>Chọn nhiều</th>
@@ -63,15 +63,9 @@
 								<tfoot>
 									<tr>
 										<th>ID</th>
-										<th>Mòn ăn</th>
+										<th>Món ăn</th>
 										<th>Ảnh đại diện</th>
 										<th>Người post</th>
-										<th><select class="form-control" id="cbbfilterStatus">
-												<option value="">----Trạng thái-----</option>
-												<option value="0">Đã Duyệt</option>
-												<option value="1">Đang xử lý</option>
-                                    		</select>
-                                    	</th>
 										<th>Action</th>
 										<th>
 											<button type="button" class="btn btn-sm btn-success" id="btnDelete" title="data-table-1">Delete</button>
