@@ -77,7 +77,7 @@ public class HomeController {
             model.addAttribute("foodPost", result);
             model.addAttribute("pageheader", "Quản lý bài đăng");//set header  at view
             model.addAttribute("activeTab", "ManagePost");//set active tab at view
-            return "managepost";
+            return "manage";
         }
         /* model.addAttribute("user", null); */
         return "redirect:/Admin";

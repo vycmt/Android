@@ -14,7 +14,7 @@
 
 <title>DASHBOARD ADMIN</title>
 
-<link href="<c:url value="/resources/css/bootstrap.min.css" ></c:url>" rel="stylesheet">
+<link  href="<c:url value="/resources/css/bootstrap.min.css" ></c:url>"  rel="stylesheet">
 
 <%-- <link href="<c:url value="/resources/css/bootstrap-theme.css" ></c:url>" rel="stylesheet"> --%>
 
@@ -49,7 +49,8 @@
 <body>
 
   <!--   Code goes here -->
-  <section id="container" class=""> <!--header start--> <header class="header dark-bg">
+  <section id="container" class=""> <!--header start--> 
+  <header class="header dark-bg">
   <div class="toggle-nav">
     <div class="icon-reorder tooltips" data-original-title="Toggle Navigation" data-placement="bottom">
       <i class="icon_menu"></i>
