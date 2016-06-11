@@ -16,7 +16,7 @@
 
 <link  href="<c:url value="/resources/css/bootstrap.min.css" ></c:url>"  rel="stylesheet">
 
-<%-- <link href="<c:url value="/resources/css/bootstrap-theme.css" ></c:url>" rel="stylesheet"> --%>
+<link href="<c:url value="/resources/css/bootstrap-theme.css" ></c:url>" rel="stylesheet">
 
 <link href="<c:url value="/resources/css/elegant-icons-style.css" ></c:url>" rel="stylesheet">
 
@@ -37,6 +37,8 @@
 <link rel="stylesheet" href="<c:url value="/resources/css/jquery-ui.css" ></c:url>"> 
 
 <link rel="stylesheet" href="<c:url value="/resources/css/rateit.css" ></c:url>">
+
+<link rel="stylesheet" href="<c:url value="/resources/css/jquery.cleditor.css" ></c:url>">
   <!-- Date picker -->
 <link rel="stylesheet" href="<c:url value="/resources/css/bootstrap-datetimepicker.min.css" ></c:url>">
 
@@ -93,44 +95,46 @@
       <li <c:if test="${activeTab eq 'Dashboard'}">class="open"</c:if>><a href="/food-web/Admin"><i
           class="fa fa-home"></i> Dashboard</a></li>
       <li <c:if test="${activeTab eq 'CreatePost'}">class="open"</c:if>><a href="/food-web/CreatePost"
-        id="postCreate"><i class="fa fa-list-alt"></i>Tạo bài viết <span class="pull-right"><i
+        id="postCreate"><i class="fa fa-list-alt"></i>Create new <span class="pull-right"><i
             class="fa fa-chevron-right"></i></span></a></li>
       <li <c:if test="${activeTab eq 'ManagePost'}">class="open"</c:if>><a href="/food-web/ManagePost"
-        id="postManage"><i class="fa fa-file-o"></i>Quản lý bài viết <span class="pull-right"><i
+        id="postManage"><i class="fa fa-file-o"></i>Manage <span class="pull-right"><i
             class="fa fa-chevron-right"></i></span></a></li>
     </ul>
     <!-- sidebar menu end-->
   </div>
   </aside> <!--sidebar end--> <!--main content start-->
   <div>
-    <div>
-      <div class="row">
-        <div class="col-lg-12">
-          <h3 class="page-header">
-            <i class="fa fa fa-bars"></i> ${pageheader}
-          </h3>
 
-        </div>
+    <div class="page-head">
+      <h2 class="pull-left">
+        <i class="fa fa-home"></i> ${pageheader}
+      </h2>
+
+      <!-- Breadcrumb -->
+      <div class="bread-crumb pull-right">
+        <a href="index.html"><i class="fa fa-home"></i> Home</a>
+        <!-- Divider -->
+        <span class="divider">/</span> <a href="#" class="bread-current">${pageheader}</a>
       </div>
-
-      <!-- page start-->
-      <div class="matter">
-        <div class="container">
-
-          <!-- Body -->
-          <decorator:body />
-
-        </div>
-      </div>
-
-      <!-- page end-->
     </div>
+
+    <!-- page start-->
+    <div class="matter">
+      <div class="container">
+
+        <!-- Body -->
+        <decorator:body />
+
+      </div>
+    </div>
+
+    <!-- page end-->
+
   </div>
   <!--main content end--> </section>
   <!-- container section end -->
 
-
-<span class="totop"><a href="#"><i class="fa fa-chevron-up"></i></a></span> 
 
   <script src="<c:url value="/resources/js/jquery.js" ></c:url>"></script>
   <script src="<c:url value="/resources/js/bootstrap.min.js" ></c:url>"></script>
@@ -139,6 +143,7 @@
   <script src="<c:url value="/resources/js/scripts.js" ></c:url>"></script>
     <script src="<c:url value="/resources/js/jquery.slimscroll.min.js" ></c:url>"></script>
   <script src="<c:url value="/resources/js/jquery-ui.min.js" ></c:url>"></script>
+  <script src="<c:url value="/resources/js/jquery.cleditor.min.js" ></c:url>"></script>
   <!-- jQuery UI -->
   <script src="<c:url value="/resources/js/respond.min.js" ></c:url>"></script>
   <script src="<c:url value="/resources/js/jquery-ui.min.js" ></c:url>"></script>
@@ -147,8 +152,7 @@
   <script src="<c:url value="/resources/js/jquery.rateit.min.js" ></c:url>"></script>
   <!-- RateIt - Star rating -->
   <script src="<c:url value="/resources/js/jquery.prettyPhoto.js" ></c:url>"></script>
-  <!-- prettyPhoto -->
-  <script src="<c:url value="/resources/js/jquery.slimscroll.min.js" ></c:url>"></script>
+
   <!-- jQuery Slim Scroll -->
   <script src="<c:url value="/resources/js/jquery.dataTables.min.js" ></c:url>"></script>
   <!-- Data tables -->

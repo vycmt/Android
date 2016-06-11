@@ -13,7 +13,7 @@
   <div class="row">
     <div class="col-lg-12">
       <h3 class="page-header">
-        <i class="fa fa fa-bars"></i> Pages
+        <i class="fa fa fa-bars"></i> Dashboard
       </h3>
       <ol class="breadcrumb">
         <li><i class="fa fa-home"></i><a href="">Home</a></li>
@@ -24,11 +24,12 @@
   </div>
 
   <div class="page-wrapper">
+  <div class="row">
     <div class="col-md-12">
 
       <div class="widget">
         <div class="widget-head">
-          <div class="pull-left">New Post</div>
+          <div class="pull-left">Thông tin món ăn</div>
           <div class="widget-icons pull-right">
             <a href="#" class="wminimize"><i class="fa fa-chevron-up"></i></a> <a href="#" class="wclose"><i
               class="fa fa-times"></i></a>
@@ -42,20 +43,20 @@
               <div class="form-group">
                 <label class="col-lg-2 control-label">Tên món ăn:</label>
                 <div class="col-lg-5">
-                  <input type="text" class="form-control" placeholder="Input title Here" id="txtFoodName">
+                  <input type="text" class="form-control" placeholder="Nhập tên món ăn" id="txtFoodName">
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-lg-2 control-label">Chủ đề:</label>
                 <div class="col-lg-2">
-                  <select class="form-control" id="cbbCategory">
+                  <select class="form-control" id="cbbCategory" >
                   </select>
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-lg-2 control-label">Ảnh:</label>
                 <div class="col-lg-5">
-                  <input type="text" class="form-control imagelink" placeholder="Image Link" id="txtImages">
+                  <input type="text" class="form-control imagelink" placeholder="Link hình ảnh" id="txtImages">
                 </div>
               </div>
               <div class="form-group">
@@ -105,6 +106,7 @@
         </div>
       </div>
 
+    </div>
     </div>
   </div>
   </section> </section> </section>

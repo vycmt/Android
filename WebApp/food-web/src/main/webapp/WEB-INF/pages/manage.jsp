@@ -4,16 +4,31 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Manage post</title>
 </head>
 <body onload="getFood()">
+
+<section id="container" class=""> <section id="main-content"> <section class="wrapper">
+  <div class="row">
+    <div class="col-lg-12">
+      <h3 class="page-header">
+        <i class="fa fa fa-bars"></i> Dashboard
+      </h3>
+      <ol class="breadcrumb">
+        <li><i class="fa fa-home"></i><a href="">Home</a></li>
+        <li><i class="fa fa-bars"></i>Pages</li>
+        <li><i class="fa fa-square-o"></i>Pages</li>
+      </ol>
+    </div>
+  </div>
+<div class="page-wrapper">
 <div class="row">
 	<div class="col-md-12">
 
 		<div class="widget">
 			<div class="widget-head">
-				<div class="pull-left">Danh sách bài đăng</div>
+				<div class="pull-left">Danh sách món ăn</div>
 				<div class="widget-icons pull-right">
 					<a href="#" class="wminimize"><i class="fa fa-chevron-up"></i></a>
 					<a href="#" class="wclose"><i class="fa fa-times"></i></a>
@@ -26,14 +41,14 @@
 						<!-- Table -->
 						<div class="table-responsive">
 							<table cellpadding="0" cellspacing="0" border="0"
-								id="data-table-1" width="100%" >
+								id="data-table-1" width="100%" class="table table-striped table-bordered table-hover" >
 								<thead>
 									<tr>
-										<th>ID</th>
-										<th>Món ăn</th>
-										<th>Ảnh đại diện</th>
+										<th>STT</th>
+										<th>Tên món</th>
+										<th>Hình ảnh</th>
 										<th>Action</th>
-										<th>Chọn nhiều</th>
+										<th>Chọn</th>
 										
 									</tr>
 								</thead>
@@ -45,7 +60,7 @@
 											<td><a href="${item.images }" class="linkView">${item.images }</a></td>
 											<td width="80px">
 												<div class="btn-group1">
-													<button class="btn btn-xs btn-success"
+												<button class="btn btn-xs btn-success"
 														value="${item.foodId}">
 														<i class="fa fa-pencil"></i>
 													</button>
@@ -62,9 +77,8 @@
 								<tfoot>
 									<tr>
 										<th>ID</th>
-										<th>Món ăn</th>
+										<th>Mòn ăn</th>
 										<th>Ảnh đại diện</th>
-										<th>Người post</th>
 										<th>Action</th>
 										<th>
 											<button type="button" class="btn btn-sm btn-success" id="btnDelete" title="data-table-1">Delete</button>
@@ -198,5 +212,9 @@
 		</div>
 	</div>
 	</div>
+  </div>
+  
+  </section>
+  </section>
 </body>
 </html>
