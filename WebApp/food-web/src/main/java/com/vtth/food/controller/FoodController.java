@@ -113,7 +113,7 @@ public class FoodController {
     @ResponseBody
     public TblFood createFood(@RequestBody TblFood newFood, HttpSession session) {
         Serializable result;
-        TblFood food = new TblFood(newFood.getFoodName(), newFood.getCategoryID(), newFood.getDescription(),
+        TblFood food = new TblFood(newFood.getFoodName(), newFood.getCategoryId(), newFood.getDescription(),
                 newFood.getListMaterial(), newFood.getImages(), 0);
         result = foodService.createFood(food);
         food.setUserID((String) (session.getAttribute("username")));

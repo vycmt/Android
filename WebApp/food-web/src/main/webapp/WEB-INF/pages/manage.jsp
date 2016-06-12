@@ -41,7 +41,7 @@
 						<!-- Table -->
 						<div class="table-responsive">
 							<table cellpadding="0" cellspacing="0" border="0"
-								id="data-table-1" width="100%" class="table table-striped table-bordered table-hover" >
+								id=""src/main/webapp/WEB-INF/pages/login.jsp"" width="100%" class="table table-striped table-bordered table-hover" >
 								<thead>
 									<tr>
 										<th>STT</th>
@@ -93,6 +93,7 @@
 			</div>
 		</div>
 	</div>
+  
 	<div id="myModal" class="modal fade" tabindex="-1" role="dialog"
 		aria-labelledby="myModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
@@ -181,6 +182,7 @@
 			</div>
 		</div>
 	</div>
+  
 	<div id="myModalCatelogue" class="modal fade" tabindex="-1" role="dialog"
 		aria-labelledby="myModalLabel" aria-hidden="true">
 		<div class="modal-dialog">

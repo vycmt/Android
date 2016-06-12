@@ -91,7 +91,7 @@
               </div>
               <div class="form-group">
                 <div class="col-lg-offset-2 col-lg-6">
-                  <button id="btnSubmit" type="submit" class="btn btn-sm btn-default">Submit</button>
+                  <button id="btnSubmit" type="button" class="btn btn-sm btn-default">Submit</button>
                   <button id="btnReset" type="button" class="btn btn-sm btn-primary">Cancel</button>
                 </div>
               </div>

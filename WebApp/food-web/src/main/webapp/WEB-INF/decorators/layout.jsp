@@ -28,6 +28,7 @@
 
 <link href="<c:url value="/resources/css/style-responsive.css" ></c:url>" rel="stylesheet">
 
+<!-- // Add thư viện sau dòng này -->
 <link rel="stylesheet" href="<c:url value="/resources/css/widgets.css" ></c:url>">
 <!-- Data tables -->
 <link rel="stylesheet" href="<c:url value="/resources/css/jquery.dataTables.css" ></c:url>">
@@ -141,6 +142,8 @@
   <script src="<c:url value="/resources/js/jquery.scrollTo.min.js" ></c:url>"></script>
   <script src="<c:url value="/resources/js/jquery.nicescroll.js" ></c:url>"></script>
   <script src="<c:url value="/resources/js/scripts.js" ></c:url>"></script>
+  
+<!--   // Từ dòng này -->
     <script src="<c:url value="/resources/js/jquery.slimscroll.min.js" ></c:url>"></script>
   <script src="<c:url value="/resources/js/jquery-ui.min.js" ></c:url>"></script>
   <script src="<c:url value="/resources/js/jquery.cleditor.min.js" ></c:url>"></script>
