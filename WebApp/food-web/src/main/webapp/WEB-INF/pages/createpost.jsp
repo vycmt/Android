@@ -9,21 +9,8 @@
 </head>
 
 <body>
-  <section id="container" class=""> <section id="main-content"> <section class="wrapper">
-  <div class="row">
-    <div class="col-lg-12">
-      <h3 class="page-header">
-        <i class="fa fa fa-bars"></i> Dashboard
-      </h3>
-      <ol class="breadcrumb">
-        <li><i class="fa fa-home"></i><a href="">Home</a></li>
-        <li><i class="fa fa-bars"></i>Pages</li>
-        <li><i class="fa fa-square-o"></i>Pages</li>
-      </ol>
-    </div>
-  </div>
 
-  <div class="page-wrapper">
+
   <div class="row">
     <div class="col-md-12">
 
@@ -49,12 +36,12 @@
               <div class="form-group">
                 <label class="col-lg-2 control-label">Chủ đề:</label>
                 <div class="col-lg-2">
-                  <select class="form-control" id="cbbCategory" >
+                  <select class="form-control" id="cbbCategory" style="width: 250px" >
                   </select>
                 </div>
               </div>
               <div class="form-group">
-                <label class="col-lg-2 control-label">Ảnh:</label>
+                <label class="col-lg-2 control-label">Đường dẫn:</label>
                 <div class="col-lg-5">
                   <input type="text" class="form-control imagelink" placeholder="Link hình ảnh" id="txtImages">
                 </div>
@@ -91,8 +78,8 @@
               </div>
               <div class="form-group">
                 <div class="col-lg-offset-2 col-lg-6">
-                  <button id="btnSubmit" type="button" class="btn btn-sm btn-default">Submit</button>
-                  <button id="btnReset" type="button" class="btn btn-sm btn-primary">Cancel</button>
+                  <button id="btnSubmit" type="button" class="btn btn-sm btn-primary">Submit</button>
+                  <button id="btnReset" type="button" class="btn btn-sm btn-warning">Cancel</button>
                 </div>
               </div>
               <div class="form-group">
@@ -108,7 +95,7 @@
 
     </div>
     </div>
-  </div>
-  </section> </section> </section>
+
+
 </body>
 </html>

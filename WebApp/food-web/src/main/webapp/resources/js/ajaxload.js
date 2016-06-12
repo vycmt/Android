@@ -74,7 +74,7 @@ $(document).ready(function() {
 		    		        },
 		    		        success: function(foodDetail) {
 		    		        	$("#createSuccess").html("<div class=\"alert alert-success\">" +
-		    		        			+foodname+" đã thêm vào cơ sở dữ liệu."+
+		    		        			" đã thêm vào cơ sở dữ liệu."+
 		    		        			"</div>");
 		    		        }
 		    		});

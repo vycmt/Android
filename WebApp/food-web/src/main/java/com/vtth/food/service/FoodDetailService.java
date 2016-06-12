@@ -8,12 +8,8 @@ import java.util.List;
 
 import com.vtth.food.entity.TblFooddetail;
 
-/**
- * @author SONY
- *
- */
 public interface FoodDetailService {
-    
+
     public Serializable createFoodDetail(TblFooddetail newFoodDetail);
     public TblFooddetail getFoodDetail(int id);
     public List<TblFooddetail> getFoodDetail();

@@ -13,20 +13,16 @@ import org.springframework.stereotype.Repository;
 import com.vtth.food.entity.TblFooddetail;
 import com.vtth.food.util.HibernateUtil;
 
-/**
- * @author KMF
- *
- */
 @Repository
 public class FoodDetailDAOImp implements FoodDetailDAO {
 
     public FoodDetailDAOImp() {
         System.out.println("FoodDetailDAOImp()");
     }
-    
+
     @Autowired
     private HibernateUtil utils;
-    
+
     public Serializable createFoodDetail(TblFooddetail newFoodDetail) {
         return utils.create(newFoodDetail);
     }

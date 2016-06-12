@@ -8,10 +8,6 @@ import java.util.List;
 
 import com.vtth.food.entity.TblFooddetail;
 
-/**
- * @author SONY
- *
- */
 public interface FoodDetailDAO {
 
     public Serializable createFoodDetail(TblFooddetail newFoodDetail);

@@ -8,21 +8,6 @@
 <title>Manage post</title>
 </head>
 <body onload="getFood()">
-
-<section id="container" class=""> <section id="main-content"> <section class="wrapper">
-  <div class="row">
-    <div class="col-lg-12">
-      <h3 class="page-header">
-        <i class="fa fa fa-bars"></i> Dashboard
-      </h3>
-      <ol class="breadcrumb">
-        <li><i class="fa fa-home"></i><a href="">Home</a></li>
-        <li><i class="fa fa-bars"></i>Pages</li>
-        <li><i class="fa fa-square-o"></i>Pages</li>
-      </ol>
-    </div>
-  </div>
-<div class="page-wrapper">
 <div class="row">
 	<div class="col-md-12">
 
@@ -41,7 +26,8 @@
 						<!-- Table -->
 						<div class="table-responsive">
 							<table cellpadding="0" cellspacing="0" border="0"
-								id=""src/main/webapp/WEB-INF/pages/login.jsp"" width="100%" class="table table-striped table-bordered table-hover" >
+								id="data-table-1" width="100%" 
+                                      class="table table-striped table-bordered table-hover" >
 								<thead>
 									<tr>
 										<th>STT</th>
@@ -76,9 +62,9 @@
 								</tbody>
 								<tfoot>
 									<tr>
-										<th>ID</th>
-										<th>Mòn ăn</th>
-										<th>Ảnh đại diện</th>
+										<th>STT</th>
+										<th>Tên món</th>
+										<th>Hình ảnh</th>
 										<th>Action</th>
 										<th>
 											<button type="button" class="btn btn-sm btn-success" id="btnDelete" title="data-table-1">Delete</button>
@@ -107,20 +93,16 @@
 				<div class="modal-body">
 					<table>
 						<tr>
-							<td><b>ID</b></td>
+							<td><b>STT</b></td>
 							<td><input type="text"  id='txtID' disabled="true"></td>
 						</tr>
 						<tr>
-							<td><b>Tên món ăn:</b></td>
+							<td><b>Tên món:</b></td>
 							<td><input type="text" class="imagelink foodName" id='txtFoodName'></td>
 						</tr>
 						<tr>
-							<td><b>Người post:</b></td>
-							<td><input type="text"  id='txtUser' disabled="true"></td>
-						</tr>
-						<tr>
 							<td><b>Chủ đề:</b></td>
-							<td><select class="form-control" id="cbbCategory">
+							<td><select class="form-control" id="cbbCategory" style="width: 300px">
 							
 							</select></td>
 							
@@ -132,11 +114,11 @@
 							</td>
 						</tr>
 						<tr>
-							<td><b>Image Link</b></td>
+							<td><b>Đường dẫn</b></td>
 							<td><input type="text" class="imagelink" id='txtImage'></td>
 						</tr>
 						<tr>
-							<td width="70px"><b>Avatar: </b></td>
+							<td width="70px"><b>Hình gốc </b></td>
 							<td><!-- <img id="imageFood" src="" alt="Smiley face"
 								height="240" width="480"> -->
 								<a id ="imageZoom"  class="prettyPhoto[pp_gal]"><img id="imageFood" alt="" height="160" width="160"></a>
@@ -145,22 +127,14 @@
 
 						<tr>
 							<td width="70px"><b>Mô tả: </b></td>
-							<td><textarea id="txtDescription" cols="105" rows="5"></textarea></td><br/>
+							<td><textarea id="txtDescription" cols="80" rows="5"></textarea></td><br/>
 						</tr>
 
 						<tr>
 							<td width="70px"><b>Nguyên liệu: </b></td>
-							<td><textarea id="txtMaterial" cols="105" rows="5"></textarea></td>
+							<td><textarea id="txtMaterial" cols="80" rows="5"></textarea></td>
 						</tr>
-						<tr>
-							<td width="70px"><b>Thông tin Nguyên liệu: </b></td>
-							<td><textarea id="txtInfo" class="cleditor"></textarea></td>
-						</tr>
-						<br />
-						<tr>
-							<td width="70px"><b>Nội Dung: </b></td>
-							<td><textarea id="txtContent" class="cleditor"></textarea></td>
-						</tr>
+
 						<tr>
 							<td><b>Lượt xem:</b></td>
 							<td><input type="text"  id='txtView' disabled="true"></td>
@@ -170,8 +144,6 @@
 							<td><input type="text"  id='txtSource' disabled="true"></td>
 						</tr>
 					</table>
-
-
 				</div>
 				<div class="modal-footer">
 
@@ -214,9 +186,8 @@
 		</div>
 	</div>
 	</div>
-  </div>
+
   
-  </section>
-  </section>
+
 </body>
 </html>

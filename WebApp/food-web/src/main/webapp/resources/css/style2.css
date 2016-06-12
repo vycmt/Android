@@ -652,7 +652,7 @@ header .header-data .hdata em{
 .sidebar .sidebar-dropdown a{
 	color: #fff !important;  
 	box-shadow: inset 0px 0px 1px #000;
-	background-color: #343434;
+	background-color: #394a59;
   background: -webkit-gradient(linear, left top, left bottom, from(#343434), to(#292929));
   background: -webkit-linear-gradient(top, #343434, #292929);
   background: -moz-linear-gradient(top, #343434, #292929);
@@ -689,7 +689,7 @@ header .header-data .hdata em{
 .sidebar #nav li i{
 	display:inline-block;
 	margin-right: 5px ;
-	background: #eee ;
+	background: #394a59 ;
 	color:#888;
 	width: 38px;
 	height: 38px;
