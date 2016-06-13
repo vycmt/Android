@@ -116,9 +116,9 @@
               <li><a href="#">Submenu #3</a></li>
             </ul>-->
           </li>
-          <li <c:if test="${activeTab eq 'CreatePost'}">class="open"</c:if>><a href="/food-web/CreatePost" id="postCreate"><i class="fa fa-list-alt"></i>Tạo bài viết <span class="pull-right"><i class="fa fa-chevron-right"></i></span></a>
+          <li <c:if test="${activeTab eq 'CreatePost'}">class="open"</c:if>><a href="/food-web/CreatePost" id="postCreate"><i class="fa fa-list-alt"></i>Tạo món ăn <span class="pull-right"><i class="fa fa-chevron-right"></i></span></a>
           </li>  
-          <li <c:if test="${activeTab eq 'ManagePost'}">class="open"</c:if>><a href="/food-web/ManagePost" id="postManage"><i class="fa fa-file-o"></i>Quản lý bài viết <span class="pull-right"><i class="fa fa-chevron-right"></i></span></a>
+          <li <c:if test="${activeTab eq 'ManagePost'}">class="open"</c:if>><a href="/food-web/ManagePost" id="postManage"><i class="fa fa-file-o"></i>Quản lý món ăn <span class="pull-right"><i class="fa fa-chevron-right"></i></span></a>
           </li> 
         </ul>
         

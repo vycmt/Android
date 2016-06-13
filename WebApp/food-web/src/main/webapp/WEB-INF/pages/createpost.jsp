@@ -61,13 +61,13 @@
               <div class="form-group">
                 <label class="col-lg-2 control-label">Chi tiết nguyên liệu:</label>
                 <div class="col-lg-6">
-                  <textarea id="txtMaterialDetail" class="cleditor"></textarea>
+                  <textarea id="txtMaterialDetail" class="" style="width: 600px"></textarea>
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-lg-2 control-label">Hướng dẫn:</label>
                 <div class="col-lg-6">
-                  <textarea class="cleditor" id="txtContent"></textarea>
+                  <textarea class="" id="txtContent" style="width: 600px"></textarea>
                 </div>
               </div>
               <div class="form-group">

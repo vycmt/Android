@@ -121,7 +121,7 @@ $(document).ready(function() {
 		});
 	    $(this).closest("tr").remove();
 	});
-	$('#data-table-1').on('click', '.btn-success',function(e){
+	$('#data-table-1').on('click', '.btn-primary',function(e){
 		
 		var foodID=$(this).attr('value');
 		$.ajax({
@@ -185,11 +185,9 @@ $(document).ready(function() {
 		    "visitNum": $( "#txtView" ).val()
 		});
 		var foodDetail = JSON.stringify({
-			"foodID" :$("#txtID").val(),
-		    "tutorial": $('#txtContent').val(),
-		    "materialInfo": $('#txtInfo').val(), 
+			"foodId" :$("#txtID").val(), 
 		    "source": $("#source").val(),
-		    "user": $("#txtUser").val()
+		   
 		});
 		$.ajax({
 			 url: "/food-web/updateFood", 
@@ -211,7 +209,7 @@ $(document).ready(function() {
 				            xhr.setRequestHeader("Content-Type", "application/json");
 				        }, 
 					 success: function(newfoodDetail) { 
-					 		alert(newfood.foodName + " updated đã cập nhật vào cơ sở dữ liệu." );
+					 		alert(" updated đã cập nhật vào cơ sở dữ liệu." );
 					    } 
 				});
 			    } 

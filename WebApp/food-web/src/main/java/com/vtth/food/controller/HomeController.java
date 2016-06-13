@@ -62,7 +62,7 @@ public class HomeController {
     public String createPost(Model model, HttpSession session) {
 
         if (session.getAttribute("username") != null) {
-            model.addAttribute("pageheader", "Create New Food");//set header  at view
+            model.addAttribute("pageheader", "Tạo món ăn");//set header  at view
             model.addAttribute("activeTab", "Create");//set active tab at view
             return "createpost";
         }
@@ -75,7 +75,7 @@ public class HomeController {
             List<TblFood> result = new ArrayList<TblFood>();
             result = foodService.getFood();
             model.addAttribute("foodPost", result);
-            model.addAttribute("pageheader", "Manage Food");//set header  at view
+            model.addAttribute("pageheader", "Quản lý món ăn");//set header  at view
             model.addAttribute("activeTab", "Manage");//set active tab at view
             return "manage";
         }

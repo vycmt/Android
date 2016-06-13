@@ -46,7 +46,7 @@
 											<td><a href="${item.images }" class="linkView">${item.images }</a></td>
 											<td width="80px">
 												<div class="btn-group1">
-												<button class="btn btn-xs btn-success"
+												<button class="btn btn-xs btn-primary"
 														value="${item.foodId}">
 														<i class="fa fa-pencil"></i>
 													</button>
