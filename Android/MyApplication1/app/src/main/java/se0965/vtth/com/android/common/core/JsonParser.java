@@ -35,7 +35,7 @@ public class JsonParser implements IJsonParser {
         try {
             return mapper.readValue(jsonString, cls);
         } catch (Exception e) {
-            throw new JsonParserException("Unnable to parse json string to object!", e);
+            throw new JsonParserException("Unable to parse json string to object!", e);
         }
     }
 

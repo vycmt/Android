@@ -29,6 +29,7 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
     public void onCreate(SQLiteDatabase sqLiteDatabase, ConnectionSource connectionSource) {
         Log.i(TAG,"DatabaseHelper.onCreate()");
         try {
+            // Table của Android DB
             TableUtils.createTable(connectionSource, Food.class);
         } catch (SQLException e) {
             Log.i(TAG,"DatabaseHelper can not create databse", e);

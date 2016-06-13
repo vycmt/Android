@@ -41,6 +41,7 @@ public class RestClient {
     private String jsonMessage = "";
     private String url;
     private int responseCode;
+    //  error Message
     private String message;
 
     private String response;
@@ -91,7 +92,7 @@ public class RestClient {
     public void execute(RequestMethod method) throws Exception {
         switch (method) {
             case GET: {
-                //add params
+                //add params TH có nhiều params
                 String combinedParams = "";
                 if (!params.isEmpty()) {
                     combinedParams += "?";

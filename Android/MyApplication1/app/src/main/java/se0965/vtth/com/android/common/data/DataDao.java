@@ -16,6 +16,7 @@ import se0965.vtth.com.android.data.DatabaseHelper;
  */
 public abstract class DataDao<Model, Id> implements IDataDao<Model, Id> {
 
+    // DAO của Android DB
     protected Dao<Model, Id> dao;
     protected Class<Model> modelClass;
 
