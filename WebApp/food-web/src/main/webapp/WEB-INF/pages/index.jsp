@@ -27,13 +27,9 @@
 				<span id="infos">
 					<a href="">View Bags</a>|<a href="">Checkout</a>
 				</span>
-				<a href="layout.html" id="logo"></a> <!-- /#logo -->
-				<div>Mon ngon moi ngay</div>
+				<img id="logo" src="<c:url value="/resources/img/logo.png"></c:url>"></a> <!-- /#logo -->
 				<ul id="navigation">
-					<li class="selected"><a href="">Home</a></li>
-					<li><a href="">About</a></li>
 					<li><a href="/food-web/Admin">Sign In</a></li>
-					<li><a href="">Contact Us</a></li>
 				</ul>
 			</div> <!-- /#header -->
 			<div id="contents">
@@ -52,13 +48,7 @@
 				</div>
 			</div> <!-- /#contents -->
 			<div id="footer">
-				<div class="navigation">
-					<a href="">Home</a>|
-					<a href="">About</a>|
-					<a href="">Contact Us</a>
-				</div>
 				<div  class="navigation">
-					<a href="" class="logo"></a>
 					<span>&copy; Copyright &copy; 2016. <a href="">VTTH</a> All rights reserved</span>
 				</div>
 			</div> <!-- /#footer -->
