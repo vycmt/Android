@@ -64,7 +64,7 @@ public class HomeController {
         if (session.getAttribute("username") != null) {
             model.addAttribute("pageheader", "Tạo món ăn");//set header  at view
             model.addAttribute("activeTab", "Create");//set active tab at view
-            return "createpost";
+            return "create";
         }
         return "redirect:/Admin";
     }
