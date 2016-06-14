@@ -5,10 +5,6 @@
  */
 package DTO;
 
-/**
- *
- * @author SONY
- */
 public class FoodDTO {
 
     private String foodName;

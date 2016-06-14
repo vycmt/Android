@@ -8,10 +8,6 @@ package Crawler;
 import Pages.monan9;
 import Pages.sotaynauan;
 
-/**
- *
- * @author SONY
- */
 public class crawler {
 
     public static void main(String[] args) {

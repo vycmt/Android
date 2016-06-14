@@ -3,15 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package DTO;
 
-/**
- *
- * @author SONY
- */
 public class CategoryDTO {
-    
+
     private String categoryName;
 
     public CategoryDTO() {
@@ -28,6 +23,5 @@ public class CategoryDTO {
     public void setCategoryName(String categoryName) {
         this.categoryName = categoryName;
     }
-    
-    
+
 }

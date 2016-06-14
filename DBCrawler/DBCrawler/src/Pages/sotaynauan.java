@@ -17,10 +17,6 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-/**
- *
- * @author SONY
- */
 public class sotaynauan implements parser {
 
     private List<String> linkCategory;
@@ -60,6 +56,7 @@ public class sotaynauan implements parser {
                             food.setListMaterial(parseListMaterial(docFood));
                             food.setCategoryID(dao.getCategoryId(categoryName.get(j)));
                             food.setVisitNum(0);
+                            // Query: "SELECT * FROM WHERE foodName=?"
                             if (dao.getFoodId(food.getFoodName()) == -1) {
                                 dao.addFood(food);
                                 FoodDetailDTO foodDetail = new FoodDetailDTO();
@@ -101,11 +98,12 @@ public class sotaynauan implements parser {
         }
     }
 
+    // Parse data từ trang web và add vào DAO
     @Override
     public void parseCategory(Document doc) {
         linkCategory = new ArrayList<String>();
         categoryName = new ArrayList<String>();
-        
+        // <li id="menu-item-4658"><a></a><ul class="sub-menu"></li>
         Elements category_HTML = doc.select("li#menu-item-4658>ul.sub-menu>li a");
         for (Element element : category_HTML) {
             CategoryDTO category = new CategoryDTO(element.text());
@@ -122,6 +120,7 @@ public class sotaynauan implements parser {
     @Override
     public String parseFoodName(Document doc) {
         String foodName = "";
+        // <h2 class="entry-title"><a></a></h2> 
         Element Foodname_html = doc.select("h2.entry-title>a[title]").first();
         if (Foodname_html != null) {
             foodName = Foodname_html.text();
@@ -132,6 +131,7 @@ public class sotaynauan implements parser {
     @Override
     public String parseImages(Document doc) {
         String linkImage = "";
+        // <a rel="prettyPhoto[slides]></a>
         Element LinkImage_html = doc.select("a[rel=prettyPhoto[slides]]").first();
         if (LinkImage_html != null) {
             linkImage = LinkImage_html.attr("href");
@@ -142,6 +142,7 @@ public class sotaynauan implements parser {
     @Override
     public String parseListMaterial(Document doc) {
         String listMaterial = "";
+        // <ul class="ingredients"></ul>
         Elements material_Html = doc.select("ul.ingredients>li");
         for (Element element : material_Html) {
             listMaterial = listMaterial + element.select("a[href]").text().trim() + ";";
@@ -152,6 +153,7 @@ public class sotaynauan implements parser {
     @Override
     public String parseDescription(Document doc) {
         String description = "";
+        // <div class="pf-content"></div>
         Elements description_Html = doc.select("div.pf-content>*");
         for (Element element : description_Html) {
             if (element.id().equals("purerecipe-wrapper")) {
@@ -201,6 +203,7 @@ public class sotaynauan implements parser {
         int number = 0;
         try {
             doc = Jsoup.connect(category).get();
+            // <section id="content"><div><a></a></div></section>
             Elements listPage = doc.select("section#content>div>a[href]");
             Element page = listPage.get(listPage.size() - 1);
             pageNumber = page.attr("href");

@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package DBUtils;
 
 import DTO.CategoryDTO;
@@ -15,20 +14,15 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-/**
- *
- * @author SONY
- */
-public class DAO implements Serializable{
-    
-    
-    public boolean addFood (FoodDTO food){
+public class DAO implements Serializable {
+
+    public boolean addFood(FoodDTO food) {
         Connection con = DBUtils.makeConnection();
         PreparedStatement stm = null;
-        if(con!= null) {
+        if (con != null) {
             String sql = "INSERT INTO tbl_food (FoodName,Description,ListMaterial,"
                     + "Images,VisitNum,CategoryID) VALUES (?,?,?,?,?,?)";
-               
+
             try {
                 stm = con.prepareStatement(sql);
                 stm.setString(1, food.getFoodName());
@@ -45,8 +39,7 @@ public class DAO implements Serializable{
             } catch (Exception e) {
                 System.out.println("ERROR: Insert Food Fail | FoodName: " + food.getFoodName());
                 e.printStackTrace();
-            }
-            finally {
+            } finally {
                 try {
                     if (stm != null) {
                         stm.close();
@@ -61,11 +54,11 @@ public class DAO implements Serializable{
 
             }
         }
-        
+
         return false;
     }
-    
-    public int getFoodId(String foodName){
+
+    public int getFoodId(String foodName) {
         Connection con = DBUtils.makeConnection();
         PreparedStatement stm = null;
         ResultSet rs = null;
@@ -101,8 +94,8 @@ public class DAO implements Serializable{
         }
         return -1;
     }
-    
-    public int getFoodDetailId(int foodID){
+
+    public int getFoodDetailId(int foodID) {
         Connection con = DBUtils.makeConnection();
         PreparedStatement stm = null;
         ResultSet rs = null;
@@ -138,8 +131,8 @@ public class DAO implements Serializable{
         }
         return -1;
     }
-    
-    public int getCategoryId(String categoryName){
+
+    public int getCategoryId(String categoryName) {
         Connection con = DBUtils.makeConnection();
         PreparedStatement stm = null;
         ResultSet rs = null;
@@ -175,8 +168,8 @@ public class DAO implements Serializable{
         }
         return -1;
     }
-    
-    public boolean addCategory(CategoryDTO category){
+
+    public boolean addCategory(CategoryDTO category) {
         Connection con = DBUtils.makeConnection();
         PreparedStatement stm = null;
         if (con != null) {
@@ -210,8 +203,8 @@ public class DAO implements Serializable{
         }
         return false;
     }
-    
-    public boolean addFoodDetail (FoodDetailDTO foodDetail){
+
+    public boolean addFoodDetail(FoodDetailDTO foodDetail) {
         Connection con = DBUtils.makeConnection();
         PreparedStatement stm = null;
         if (con != null) {
@@ -250,8 +243,8 @@ public class DAO implements Serializable{
         }
         return false;
     }
-    
-    public boolean updateFood(FoodDTO food, int foodID){
+
+    public boolean updateFood(FoodDTO food, int foodID) {
         Connection con = DBUtils.makeConnection();
         PreparedStatement stm = null;
         if (con != null) {
@@ -293,8 +286,8 @@ public class DAO implements Serializable{
         }
         return false;
     }
-    
-    public boolean updateFoodDetail(FoodDetailDTO foodDetail){
+
+    public boolean updateFoodDetail(FoodDetailDTO foodDetail) {
         Connection con = DBUtils.makeConnection();
         PreparedStatement stm = null;
         if (con != null) {

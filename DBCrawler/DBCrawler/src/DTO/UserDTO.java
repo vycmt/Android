@@ -3,15 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package DTO;
 
-/**
- *
- * @author SONY
- */
 public class UserDTO {
-    
+
     private int userID;
     private String userName;
     private String password;
@@ -48,6 +43,5 @@ public class UserDTO {
     public void setPassword(String password) {
         this.password = password;
     }
-    
-    
+
 }

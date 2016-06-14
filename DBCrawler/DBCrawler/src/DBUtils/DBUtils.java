@@ -10,10 +10,6 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-/**
- *
- * @author SONY
- */
 public class DBUtils implements Serializable {
 
     public static Connection makeConnection() {

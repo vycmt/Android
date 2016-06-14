@@ -16,10 +16,6 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-/**
- *
- * @author SONY
- */
 public class monan9 implements parser {
 
     private List<String> linkcategory;

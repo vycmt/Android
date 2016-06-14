@@ -41,8 +41,6 @@
   <link href="<c:url value="/resources/css/widgets.css" ></c:url>" rel="stylesheet">   
 
   
-
-  
 </head>
 
 <body>
