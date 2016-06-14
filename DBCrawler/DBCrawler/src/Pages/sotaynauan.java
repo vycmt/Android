@@ -105,6 +105,7 @@ public class sotaynauan implements parser {
     public void parseCategory(Document doc) {
         linkCategory = new ArrayList<String>();
         categoryName = new ArrayList<String>();
+        
         Elements category_HTML = doc.select("li#menu-item-4658>ul.sub-menu>li a");
         for (Element element : category_HTML) {
             CategoryDTO category = new CategoryDTO(element.text());

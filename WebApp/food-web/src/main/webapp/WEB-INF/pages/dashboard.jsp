@@ -349,15 +349,15 @@
     <script src="<c:url value="/resources/js/jquery.js" ></c:url>"></script>
     <script src="<c:url value="/resources/js/jquery-ui-1.10.4.min.js" ></c:url>"></script>
     <script src="<c:url value="/resources/js/jquery-1.8.3.min.js" ></c:url>"></script>
-    <script src="<c:url value="/resources/js/jquery-ui-1.9.2.custom.min.js" type="text/javascript"></c:url>"></script>
+    <script src="<c:url value="/resources/js/jquery-ui-1.9.2.custom.min.js" ></c:url>"></script>
     <!-- bootstrap -->
     <script src="<c:url value="/resources/js/bootstrap.min.js" ></c:url>"></script>
     <!-- nice scroll -->
     <script src="<c:url value="/resources/js/jquery.scrollTo.min.js" ></c:url>"></script>
-    <script src="<c:url value="/resources/js/jquery.nicescroll.js" type="text/javascript"></c:url>"></script>
+    <script src="<c:url value="/resources/js/jquery.nicescroll.js" ></c:url>"></script>
     <!-- charts scripts -->
     <script src="<c:url value="/resources/js/jquery.knob.js" ></c:url>"></script>
-    <script src="<c:url value="/resources/js/jquery.sparkline.js" type="text/javascript"></c:url>"></script>
+    <script src="<c:url value="/resources/js/jquery.sparkline.js" ></c:url>"></script>
     <script src="<c:url value="/resources/js/jquery.easy-pie-chart.js" ></c:url>"></script>
     <script src="<c:url value="/resources/js/owl.carousel.js" ></c:url>"></script>
     <!--script for this page only-->
