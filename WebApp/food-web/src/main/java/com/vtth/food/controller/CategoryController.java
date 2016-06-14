@@ -20,7 +20,7 @@ import com.vtth.food.entity.TblCategory;
 import com.vtth.food.service.CategoryService;
 
 @Controller
-public class CatalogController {
+public class CategoryController {
 
     @Autowired
     private CategoryService categoryService;
