@@ -24,12 +24,9 @@
 					<a href="http://facebook.com/freewebsitetemplates" target="_blank" class="facebook"></a>
 					
 				</span>
-				<span id="infos">
-					<a href="">View Bags</a>|<a href="">Checkout</a>
-				</span>
 				<img id="logo" src="<c:url value="/resources/img/logo.png"></c:url>"></a> <!-- /#logo -->
 				<ul id="navigation">
-					<li><a href="/food-web/Admin">Sign In</a></li>
+					<li><a href="/food-web/Admin" class="col-md-6">Sign In</a></li>
 				</ul>
 			</div> <!-- /#header -->
 			<div id="contents">
